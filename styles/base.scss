@@ -9,3 +9,8 @@
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
+
+%primary-graient-color {
+  background: #ffa001;
+  background: linear-gradient(270deg, #ffa001 0%, #ff5801 100%);
+}

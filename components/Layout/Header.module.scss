@@ -1,188 +1,58 @@
 @use 'styles/base';
 
-.overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  min-height: 100%;
-  background: transparent;
-  z-index: -111;
-  @extend %transition;
-
-  &.active {
-    z-index: 11;
-  }
-
-  &.overlay-color {
-    background: base.$body-black;
-    z-index: 11;
-  }
-}
-
 .header {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 11;
-  border-bottom: 1px solid transparent;
+  height: base.$header-height;
   @extend %transition;
 
   &.sticky {
     background: base.$body-black;
     position: fixed;
     top: 0;
-    // border-bottom: 1px solid rgba(base.$primary-color, 0.1);
   }
 }
 
-.headerBottom {
-  width: 100%;
-  padding: 20px 0;
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  gap: 10px;
 
-  @include base.breakpoint(max-lg) {
-    padding: 15px 0;
+  li {
+    position: relative;
+    list-style: none;
+    padding: 7px 0;
+
+    a {
+      display: block;
+      padding: 4px 15px;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: white;
+      position: relative;
+    }
+  }
+
+  .btnClose {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    opacity: 1 !important;
+  }
+
+  .btnSignin {
+    height: 30px;
+    border-color: white;
+  }
+
+  .btnSignup {
+    @extend %primary-graient-color;
   }
 }
-
-// .headerBottomArea {
-//   @extend %flex;
-//   justify-content: space-between;
-
-//   @include base.breakpoint(max-lg) {
-//     justify-content: space-between;
-//   }
-// }
-
-// // Menu
-// .menu {
-//   @extend %flex;
-//   align-items: center;
-//   margin: 0;
-//   position: relative;
-
-//   li {
-//     position: relative;
-//     list-style: none;
-//     padding: 7px 0;
-
-//     a {
-//       display: block;
-//       padding: 4px 15px;
-//       font-size: 15px;
-//       font-weight: 600;
-//       text-transform: uppercase;
-//       color: white;
-//       position: relative;
-//     }
-//   }
-
-//   .btnClose {
-//     position: absolute;
-//     right: 20px;
-//     top: 20px;
-//     color: white;
-//     opacity: 1 !important;
-//   }
-// }
-
-// // Mobile Menu
-// @include base.breakpoint(max-lg) {
-//   .menu {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     padding: 50px 30px 50px;
-//     max-height: calc(100vh - 50px);
-//     min-width: 200px;
-//     width: 100%;
-//     visibility: hidden;
-//     transform-origin: top;
-//     transform: translateY(-100px) scaleY(0.6);
-//     opacity: 0;
-//     overflow-y: auto;
-//     @include base.transition;
-
-//     &.active {
-//       background: base.$section-bg;
-//       opacity: 1;
-//       transform: translateY(0) scaleY(1);
-//       visibility: visible;
-//       z-index: 9999;
-//       top: 0px;
-
-//       .cmnBtn {
-//         border-color: white;
-//       }
-//     }
-
-//     li {
-//       padding: 3px 0;
-//       width: 100%;
-//       border-bottom: 1px solid rgba(white, 0.2);
-
-//       &:nth-last-child(2) {
-//         border-bottom: none;
-//       }
-
-//       a {
-//         color: white;
-//         display: inline-block;
-//       }
-//     }
-
-//     .btn {
-//       background: white !important;
-//       border-color: transparent !important;
-//       color: base.$base-color !important;
-//     }
-//   }
-// }
-
-// .headerTrigger {
-//   cursor: pointer;
-//   margin-top: -10px;
-
-//   &.active {
-//     span {
-//       background: none !important;
-//       &::before {
-//         transform: rotate(-45deg) translate(-11px, 0px);
-//         background: white;
-//       }
-//       &::after {
-//         transform: rotate(45deg) translate(-11px, 0px);
-//         background: white;
-//       }
-//     }
-//   }
-
-//   span {
-//     display: inline-block;
-//     line-height: 1.7;
-//     width: 25px;
-//     height: 2px;
-//     background: white;
-//     position: relative;
-//     transition: all ease 0.3s;
-//     &::after,
-//     &::before {
-//       position: absolute;
-//       content: '';
-//       width: 100%;
-//       height: 100%;
-//       left: 0;
-//       background: white;
-//       @include base.transition;
-//     }
-
-//     &::after {
-//       bottom: -8px;
-//     }
-
-//     &::before {
-//       top: -8px;
-//     }
-//   }
-// }

@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 import Image from 'next/image'
 import Link from 'next/link'
 import classNames from 'classnames'
+import { Button } from 'react-bootstrap'
 
 import styles from './Header.module.scss'
 
@@ -21,58 +22,50 @@ const Header: FunctionComponent = () => {
     header.classList.toggle(styles.sticky, window.scrollY > 0)
   }
 
-  const handleClickOpenMenu = () => {
-    const menu = document.querySelector(`.${styles.menu}`)
-    const overlay = document.querySelector(`.${styles.overlay}`)
-    if (!menu || !overlay) return
-
-    menu.classList.toggle(styles.active, true)
-    overlay.classList.toggle(styles.active, true)
-  }
-
-  const handleClickCloseMenu = () => {
-    const menu = document.querySelector(`.${styles.menu}`)
-    const overlay = document.querySelector(`.${styles.overlay}`)
-    if (!menu || !overlay) return
-
-    menu.classList.toggle(styles.active, false)
-    overlay.classList.toggle(styles.active, false)
-  }
-
   return (
     <>
-      <div className={styles.overlay} onClick={() => handleClickCloseMenu()}></div>
-      <div id='header' className={styles.header}>
+      <header id='header' className={styles.header}>
         <Container>
-          <div className={styles.headerBottom}>
-            <div className={styles.headerBottomArea}>
-              <Link href='/'>
-                <a>
-                  <Image src='/images/logo.webp' alt='logo' unoptimized width={150} height={42} />
-                </a>
-              </Link>
-              <ul className={styles.menu}>
-                {/* {routes.map((item, index) => (
-                  <li onClick={() => handleClickCloseMenu()} key={index}>
-                    <Link href={item.path}>
-                      <a>{item.title}</a>
-                    </Link>
-                  </li>
-                ))} */}
-                <button
-                  className={classNames(styles.btnClose, 'btn-close btn-close-white d-lg-none')}
-                  onClick={() => handleClickCloseMenu()}
-                ></button>
-              </ul>
-              <div className='d-flex d-lg-none align-items-center'>
-                <div className={classNames(styles.headerTrigger, 'me-2')} onClick={() => handleClickOpenMenu()}>
-                  <span></span>
-                </div>
-              </div>
-            </div>
+          <div className='d-flex justify-content-between'>
+            <Link href='/'>
+              <a className='d-flex align-items-center'>
+                <Image src='/images/header-logo.png' alt='logo' unoptimized width={152} height={25} />
+              </a>
+            </Link>
+            <ul className={styles.menu}>
+              <li className='d-none d-md-block'>
+                <Link href='/'>
+                  <a>หน้าแรก</a>
+                </Link>
+              </li>
+              <li className='d-none d-md-block'>
+                <Link href='/'>
+                  <a>โปรโมชัน</a>
+                </Link>
+              </li>
+              <li className='d-none d-md-block'>
+                <Link href='/'>
+                  <a>บทความ</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/' passHref>
+                  <Button variant='outline-dark' className={styles.btnSignin}>
+                    เข้าสู่ระบบ
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link href='/' passHref>
+                  <Button variant='outline-dark' className={styles.btnSignup}>
+                    สมัครสมาชิก
+                  </Button>
+                </Link>
+              </li>
+            </ul>
           </div>
         </Container>
-      </div>
+      </header>
     </>
   )
 }
