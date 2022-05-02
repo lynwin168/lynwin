@@ -6,7 +6,7 @@ import styles from './HomePromotion.module.scss'
 
 const HomePromotion: FunctionComponent = () => {
   return (
-    <div className={styles.promotionContainer}>
+    <div id='home-promotion' className={styles.promotionContainer}>
       <Container>
         <Row className='gy-3'>
           {new Array(9).fill(undefined).map((_, index) => {

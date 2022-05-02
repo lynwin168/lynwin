@@ -1,0 +1,12 @@
+@use 'styles/base';
+
+.navigationContainer {
+  background-color: base.$body-black-color;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  padding: 0 10px;
+}

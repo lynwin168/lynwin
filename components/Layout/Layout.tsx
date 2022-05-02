@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react'
+import BottomNavigationBar from './BottomNavigationBar'
 
 import Footer from './Footer'
 import Header from './Header'
@@ -13,6 +14,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
       <Header />
       <main>{children}</main>
       <Footer />
+      <BottomNavigationBar />
     </>
   )
 }

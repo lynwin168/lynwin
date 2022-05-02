@@ -14,3 +14,11 @@
   background: variables.$orange-color;
   background: linear-gradient(270deg, variables.$orange-color 0%, variables.$dark-orange-color 100%);
 }
+
+%primary-text-graient-color {
+  background: variables.$orange-color;
+  background: linear-gradient(270deg, variables.$orange-color 0%, variables.$dark-orange-color 100%);
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
