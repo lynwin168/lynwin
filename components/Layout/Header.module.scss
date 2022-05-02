@@ -11,7 +11,7 @@
   @extend %transition;
 
   &.sticky {
-    background: base.$body-black;
+    background: base.$body-black-color;
     position: fixed;
     top: 0;
   }

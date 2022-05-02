@@ -1,0 +1,6 @@
+@use 'styles/base';
+
+.articleContainer {
+  background-color: base.$body-black-color;
+  padding: 40px;
+}

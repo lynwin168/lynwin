@@ -28,7 +28,7 @@ const Header: FunctionComponent = () => {
           <div className='d-flex justify-content-between'>
             <Link href='/'>
               <a className='d-flex align-items-center'>
-                <Image src='/images/header-logo.png' alt='logo' unoptimized width={152} height={25} />
+                <Image src='/images/header-logo.webp' alt='logo' unoptimized width={152} height={25} />
               </a>
             </Link>
             <ul className={styles.menu}>

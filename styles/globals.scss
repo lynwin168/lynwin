@@ -1,3 +1,5 @@
+@use 'base';
+
 @import '~bootstrap/scss/bootstrap';
 
 html,
@@ -16,4 +18,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.home-article-slick-slider {
+  .slick-dots button::before {
+    font-size: 10px !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .slick-list {
+    padding-bottom: 10px;
+  }
+
+  .slick-dots li.slick-active button::before {
+    color: white !important;
+    opacity: 1;
+  }
 }
