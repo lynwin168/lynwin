@@ -38,7 +38,7 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className='d-none d-md-block'>
-                <Link href='/'>
+                <Link href='#home-promotion'>
                   <a>โปรโมชัน</a>
                 </Link>
               </li>
@@ -48,18 +48,26 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li>
-                <Link href='/' passHref>
-                  <Button variant='outline-dark' className={styles.btnSignin}>
-                    เข้าสู่ระบบ
-                  </Button>
-                </Link>
+                <Button
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://lynwin168.servicelyn.com/signup'
+                  variant='outline-dark'
+                  className={styles.btnSignin}
+                >
+                  เข้าสู่ระบบ
+                </Button>
               </li>
               <li>
-                <Link href='/' passHref>
-                  <Button variant='outline-dark' className={styles.btnSignup}>
-                    สมัครสมาชิก
-                  </Button>
-                </Link>
+                <Button
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://lynwin168.servicelyn.com/'
+                  variant='outline-dark'
+                  className={styles.btnSignup}
+                >
+                  สมัครสมาชิก
+                </Button>
               </li>
             </ul>
           </div>
