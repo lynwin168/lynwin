@@ -11,6 +11,6 @@
 }
 
 %primary-graient-color {
-  background: #ffa001;
-  background: linear-gradient(270deg, #ffa001 0%, #ff5801 100%);
+  background: variables.$orange-color;
+  background: linear-gradient(270deg, variables.$orange-color 0%, variables.$dark-orange-color 100%);
 }

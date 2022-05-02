@@ -2,7 +2,6 @@ import { FunctionComponent, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import Image from 'next/image'
 import Link from 'next/link'
-import classNames from 'classnames'
 import { Button } from 'react-bootstrap'
 
 import styles from './Header.module.scss'
