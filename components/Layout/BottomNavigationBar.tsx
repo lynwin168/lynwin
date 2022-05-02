@@ -19,7 +19,7 @@ const BottomNavigationBar: FunctionComponent = () => {
         <BottomNavigationItem icon={faUserPlus} title='สมัครสมาชิก' />
       </a>
       <div className={classNames('mx-1 logo-animation ', styles.logo)}>
-        <Image src='/images/linwin_logo_solo.png' width={40} height={40} alt='logo' unoptimized />
+        <Image src='/images/linwin-logo-solo.webp' width={40} height={40} alt='logo' unoptimized />
       </div>
       <Link href='#home-promotion'>
         <a>
