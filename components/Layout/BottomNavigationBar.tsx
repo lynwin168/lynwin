@@ -18,8 +18,8 @@ const BottomNavigationBar: FunctionComponent = () => {
       <a target='_blank' rel='noreferrer' href='https://lynwin168.servicelyn.com/signup'>
         <BottomNavigationItem icon={faUserPlus} title='สมัครสมาชิก' />
       </a>
-      <div className='mx-1'>
-        <Image src='/images/header-logo.webp' width={152} height={25} alt='logo' unoptimized />
+      <div className={classNames('mx-1 logo-animation ', styles.logo)}>
+        <Image src='/images/linwin_logo_solo.png' width={40} height={40} alt='logo' unoptimized />
       </div>
       <Link href='#home-promotion'>
         <a>

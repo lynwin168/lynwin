@@ -9,4 +9,12 @@
   display: flex;
   gap: 5px;
   padding: 0 10px;
+
+  a {
+    flex: 1;
+  }
+
+  .logo {
+    min-width: 40px;
+  }
 }

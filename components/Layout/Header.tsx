@@ -47,7 +47,7 @@ const Header: FunctionComponent = () => {
                   <a>บทความ</a>
                 </Link>
               </li>
-              <li>
+              <li className='d-none d-sm-block'>
                 <Button
                   target='_blank'
                   rel='noreferrer'
