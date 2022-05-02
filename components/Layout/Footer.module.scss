@@ -1,0 +1,6 @@
+@use 'styles/base';
+
+.footerContainer {
+  background: base.$body-dark-blue-color;
+  background: linear-gradient(0, base.$body-dark-blue-color 0%, base.$body-dark-blue2-color 100%);
+}

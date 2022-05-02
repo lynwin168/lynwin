@@ -1,4 +1,6 @@
 import { FunctionComponent } from 'react'
+
+import Footer from './Footer'
 import Header from './Header'
 
 interface LayoutProps {
@@ -10,6 +12,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
