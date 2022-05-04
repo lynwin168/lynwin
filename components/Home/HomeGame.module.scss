@@ -5,19 +5,19 @@
   background: linear-gradient(0deg, rgba(2, 16, 72, 1) 0%, rgba(22, 44, 136, 1) 40%, rgba(0, 89, 179, 1) 100%);
   color: white;
   position: relative;
-  // padding: 40px 0;
+  padding: 40px 0;
 
   &::before {
     content: '';
     background-image: url('/images/home-game-bg.svg');
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 250px;
+    height: 400px;
     opacity: 0.2;
   }
 
