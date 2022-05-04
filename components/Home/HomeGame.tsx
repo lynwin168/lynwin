@@ -38,6 +38,10 @@ const HomeGame: FunctionComponent = () => {
 
   return (
     <div className={classNames('text-center', styles.gameContainer)}>
+      <div className='position-relative' style={{ height: 53 }}>
+        {/* <Image src='/images/Asset 3.svg' layout='fill' unoptimized /> */}
+      </div>
+      {/* <img src='/images/Asset 3.svg' alt='' height={53} /> */}
       <Container className='position-relative'>
         <h1 className='mb-0'>เกมส์มันส์มันส์</h1>
         <span>เกมเยอะ ภาพสวยทั้งใหม่ และ เป็นที่นิยม</span>
@@ -60,7 +64,6 @@ const HomeGame: FunctionComponent = () => {
         </Slider>
         <Button className={classNames('mt-2', styles.btnAllGame)}>เกมส์ทั้งหมด</Button>
       </Container>
-      <div></div>
     </div>
   )
 }
