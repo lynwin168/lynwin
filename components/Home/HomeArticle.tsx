@@ -9,7 +9,7 @@ const HomeArticle: FunctionComponent = () => {
   const settings: Settings = {
     autoplay: true,
     autoplaySpeed: 3000,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -39,15 +39,29 @@ const HomeArticle: FunctionComponent = () => {
     <div className={styles.articleContainer}>
       <Container>
         <h1 className='text-center text-white'>บทความ</h1>
-        <Slider className='home-article-slick-slider mt-4' {...settings}>
+        <Slider className='home-slick-slider article-slick-slider mt-4' {...settings}>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/article_01.jpg' alt='article' width={400} height={200} />
+            <Image src='/images/article_01.jpg' alt='article' width={400} height={200} style={{ borderRadius: 5 }} />
           </div>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/article_01.jpg' alt='article' width={400} height={200} />
+            <Image
+              className='rounded-5'
+              src='/images/article_01.jpg'
+              alt='article'
+              width={400}
+              height={200}
+              style={{ borderRadius: 5 }}
+            />
           </div>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/article_01.jpg' alt='article' width={400} height={200} />
+            <Image
+              className='rounded-5'
+              src='/images/article_01.jpg'
+              alt='article'
+              width={400}
+              height={200}
+              style={{ borderRadius: 5 }}
+            />
           </div>
         </Slider>
       </Container>
