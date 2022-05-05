@@ -21,6 +21,12 @@
     opacity: 0.2;
   }
 
+  @include base.breakpoint(max-xs) {
+    & {
+      padding: 40px 0;
+    }
+  }
+
   .btnAllGame {
     @extend %primary-graient-color;
     border-radius: 20px;
