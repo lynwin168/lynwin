@@ -8,9 +8,7 @@ import { Container } from 'react-bootstrap'
 const HomeHeader: FunctionComponent = () => {
   return (
     <div className={classNames('ratio', styles.bg)}>
-      {/* <Container className='ratio'> */}
-      <Image src='/images/home-banner.png' alt='home banner' layout='fill' unoptimized objectFit='contain' />
-      {/* </Container> */}
+      <Image src='/images/home-banner.webp' alt='home banner' layout='fill' unoptimized objectFit='contain' />
     </div>
   )
 }

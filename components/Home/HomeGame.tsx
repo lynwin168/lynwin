@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import Slider, { Settings } from 'react-slick'
 import Image from 'next/image'
 
+import Illustration from '../../public/images/Asset 4.svg'
 import styles from './HomeGame.module.scss'
 import { Button, Container } from 'react-bootstrap'
 
@@ -38,32 +39,34 @@ const HomeGame: FunctionComponent = () => {
 
   return (
     <div className={classNames('text-center', styles.gameContainer)}>
-      <div className='position-relative' style={{ height: 53 }}>
-        {/* <Image src='/images/Asset 3.svg' layout='fill' unoptimized /> */}
+      <div className={classNames('ratio', styles.divider, styles.top)}>
+        <Image src='/images/home-game-top-divider.webp' layout='fill' alt='divider' />
       </div>
-      {/* <img src='/images/Asset 3.svg' alt='' height={53} /> */}
       <Container className='position-relative'>
         <h1 className='mb-0'>เกมส์มันส์มันส์</h1>
         <span>เกมเยอะ ภาพสวยทั้งใหม่ และ เป็นที่นิยม</span>
         <Slider className='home-slick-slider mt-4' {...settings}>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/game_01.png' alt='article' width={290} height={400} />
+            <Image src='/images/game_01.webp' alt='game_01' width={290} height={400} />
           </div>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/game_02.png' alt='article' width={290} height={400} />
+            <Image src='/images/game_02.webp' alt='game_02' width={290} height={400} />
           </div>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/game_03.png' alt='article' width={290} height={400} />
+            <Image src='/images/game_03.webp' alt='game_03' width={290} height={400} />
           </div>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/game_04.png' alt='article' width={290} height={400} />
+            <Image src='/images/game_04.webp' alt='game_04' width={290} height={400} />
           </div>
           <div className='d-flex justify-content-center'>
-            <Image src='/images/game_05.png' alt='article' width={290} height={400} />
+            <Image src='/images/game_05.webp' alt='game_05' width={290} height={400} />
           </div>
         </Slider>
         <Button className={classNames('mt-2', styles.btnAllGame)}>เกมส์ทั้งหมด</Button>
       </Container>
+      <div className={classNames('ratio', styles.divider, styles.bottom)}>
+        <Image src='/images/home-game-bottom-divider.webp' layout='fill' alt='divider' />
+      </div>
     </div>
   )
 }

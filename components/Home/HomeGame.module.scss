@@ -5,7 +5,7 @@
   background: linear-gradient(0deg, rgba(2, 16, 72, 1) 0%, rgba(22, 44, 136, 1) 40%, rgba(0, 89, 179, 1) 100%);
   color: white;
   position: relative;
-  padding: 40px 0;
+  padding: 80px 0;
 
   &::before {
     content: '';
@@ -34,7 +34,18 @@
   }
 
   .divider {
-    // background-image: url('/images/home-game-top-divider.svg');
-    min-height: 50px;
+    --bs-aspect-ratio: calc(111 / 4000 * 100%); // ratio 32:15 for banner
+    position: absolute;
+    width: 100%;
+
+    &.top {
+      top: 0;
+      left: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+      left: 0;
+    }
   }
 }
