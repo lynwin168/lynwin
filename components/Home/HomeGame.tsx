@@ -62,7 +62,6 @@ const HomeGame: FunctionComponent = () => {
             <Image src='/images/game_05.webp' alt='game_05' width={290} height={400} />
           </div>
         </Slider>
-        <Button className={classNames('mt-2', styles.btnAllGame)}>เกมส์ทั้งหมด</Button>
       </Container>
       <div className={classNames('ratio', styles.divider, styles.bottom)}>
         <Image src='/images/home-game-bottom-divider.webp' layout='fill' alt='divider' />
