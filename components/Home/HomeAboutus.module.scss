@@ -26,8 +26,8 @@
   position: relative;
   padding: {
     top: 40px;
-    left: 0;
-    right: 0;
+    left: 40px;
+    right: 40px;
     bottom: 120px;
   }
 }
@@ -161,29 +161,13 @@
   }
 }
 
-@media (max-width: 1460px) {
-  .welcomeTextContainer {
-    margin: 0 40px;
-  }
-}
-
 @include base.breakpoint(max-xxl) {
   .secondContent {
     margin-top: 50px !important;
   }
 }
 
-@include base.breakpoint(max-xl) {
-  .welcomeTextContainer {
-    margin: 0 100px;
-  }
-}
-
 @include base.breakpoint(max-lg) {
-  .welcomeTextContainer {
-    margin: 0;
-  }
-
   .kingIcon {
     display: none;
   }
@@ -198,23 +182,17 @@
   }
 }
 
-@media (max-width: 835px) {
-  .welcomeTextContainer {
-    margin: 0 40px;
-  }
-}
-
 @include base.breakpoint(max-md) {
   .rowContent {
     margin-top: 100px;
   }
 
   .welcomeTextContainer {
-    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .welcomeTextContainer {
-    margin: 0 20px;
     box-shadow: none;
     padding-top: 0px !important;
 
@@ -257,6 +235,10 @@
 }
 
 @include base.breakpoint(max-sm) {
+  .contentContainer {
+    padding-bottom: 40px;
+  }
+
   .welcomeLabel {
     top: -10% !important;
 
