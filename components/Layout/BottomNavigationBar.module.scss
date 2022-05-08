@@ -4,15 +4,17 @@
   background-color: base.$body-black-color;
   height: base.$navigation-bar-height;
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   display: flex;
   gap: 5px;
-  padding: 0 10px;
   z-index: 10;
 
   a {
     flex: 1;
+    width: 80px;
+    display: flex;
+    justify-content: center;
   }
 
   .logo {
