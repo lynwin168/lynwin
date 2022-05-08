@@ -1,0 +1,49 @@
+@use 'base';
+
+@import '~bootstrap/scss/bootstrap';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: 'Prompt', sans-serif;
+  height: 2000px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.home-slick-slider {
+  .slick-dots button::before {
+    font-size: 10px !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  &.article-slick-slider {
+    .slick-list {
+      padding-bottom: 10px;
+    }
+  }
+
+  .slick-dots li.slick-active button::before {
+    color: white !important;
+    opacity: 1;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  box-shadow: none;
+}

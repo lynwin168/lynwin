@@ -1,0 +1,16 @@
+@forward '_abstracts/_mixins';
+@forward '_abstracts/_variables';
+
+// NOTE: import to the file.
+@use '_abstracts/_variables';
+
+%transition {
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+%primary-graient-color {
+  background: variables.$orange-color;
+  background: linear-gradient(270deg, variables.$orange-color 0%, variables.$dark-orange-color 100%);
+}
