@@ -1,0 +1,22 @@
+@use 'styles/base';
+
+.searchBox {
+  padding-right: 60px;
+}
+
+.searchButton {
+  background: base.$gradient-base !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 55px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 0;
+
+  @include base.hover-full-state {
+    box-shadow: -5px -5px 20px 0px rgba(base.$base-color, 0.6), 3px 5px 20px 0px rgba(base.$primary-color, 0.2);
+    @extend %shadow3;
+  }
+}

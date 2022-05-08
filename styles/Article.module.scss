@@ -1,0 +1,29 @@
+@use 'styles/base';
+
+.articleSection {
+  //   @include base.min-page-height;
+  //   padding: {
+  //     top: base.$page-top-space;
+  //     bottom: base.$page-bottom-space;
+  //   }
+  //   position: relative;
+  //   background: url('/images/article-bg.webp') center no-repeat;
+  //   background-size: cover;
+
+  //   &::before {
+  //     @include base.before-set;
+  //     background: base.$section-bg;
+  //     opacity: 0.9;
+  //   }
+
+  //   .container {
+  //     position: relative;
+  //     z-index: 1;
+  //   }
+}
+
+.pagination {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+}

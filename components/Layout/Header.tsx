@@ -43,7 +43,7 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className='d-none d-md-block'>
-                <Link href='/'>
+                <Link href='/article'>
                   <a>บทความ</a>
                 </Link>
               </li>

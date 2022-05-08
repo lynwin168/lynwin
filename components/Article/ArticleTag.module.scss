@@ -1,0 +1,25 @@
+@use 'styles/base';
+
+.tagWrapper {
+  background-color: base.$section-bg;
+  @extend %flex;
+
+  .tagItemsWrapper {
+    margin-left: 15px;
+    color: base.$base-color !important;
+    @extend %flex;
+
+    & a {
+      @include base.hover-full-state {
+        color: base.$base-color !important;
+      }
+    }
+
+    & a:not(:last-child) {
+      &::after {
+        content: ',';
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use 'styles/base';
+
+.pageItem {
+  text-align: center;
+  padding: 3px;
+
+  &.active {
+    a,
+    span {
+      // background: base.$base-color;
+      // color: base.$dark;
+      // border-color: rgba(base.$base-color, 1);
+    }
+  }
+
+  & > a,
+  span {
+    width: 45px;
+    height: 45px;
+    // color: base.$base-color;
+    line-height: 45px;
+    padding: 0;
+    border-radius: 50% !important;
+    // border-color: rgba(base.$base-color, 0.1);
+    // background: base.$body-bg;
+    box-shadow: none;
+    outline: 0;
+
+    // @include base.hover-full-state {
+    // background: base.$base-color;
+    // color: base.$dark;
+    // border-color: rgba(base.$base-color, 1);
+    // }
+  }
+
+  &.disabled {
+    cursor: no-drop !important;
+    span,
+    a {
+      background: rgba(white, 0.05) !important;
+      border: none !important;
+      color: white !important;
+    }
+  }
+}
