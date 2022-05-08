@@ -9,8 +9,8 @@
 
 .cardViewHover {
   transition: 0.4s;
-}
 
-.cardViewHover:hover {
-  transform: scale(1.02);
+  @include base.hover-full-state {
+    transform: scale(1.02);
+  }
 }

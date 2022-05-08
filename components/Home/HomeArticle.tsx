@@ -1,6 +1,8 @@
+import classNames from 'classnames'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import { Container } from 'react-bootstrap'
+import { Button, Container } from 'react-bootstrap'
 import Slider, { Settings } from 'react-slick'
 
 import styles from './HomeArticle.module.scss'
@@ -37,7 +39,7 @@ const HomeArticle: FunctionComponent = () => {
 
   return (
     <div className={styles.articleSection}>
-      <Container>
+      <Container className='text-center'>
         <h1 className='text-center text-white'>บทความ</h1>
         <Slider className='home-slick-slider article-slick-slider mt-4' {...settings}>
           <div className='d-flex justify-content-center'>
@@ -64,6 +66,9 @@ const HomeArticle: FunctionComponent = () => {
             />
           </div>
         </Slider>
+        <Link href='/article' passHref>
+          <Button className={classNames(styles.viewAllArticle, 'mt-3')}>บทความทั้งหมด</Button>
+        </Link>
       </Container>
     </div>
   )

@@ -13,12 +13,15 @@ const ArticleTag: FunctionComponent<ArticleTagProps> = ({ tags }) => {
   if (!tags.data.length) return null
 
   return (
-    <div className={styles.tagWrapper}>
-      <div className='mr-2'>Tag:</div>
-      <div className={styles.tagItemsWrapper}>
-        {tags.data.map((tag) => (
+    <div className={styles.tagContainer}>
+      <div className='me-2'>Tag :</div>
+      <div className={styles.tagItems}>
+        {tags.data.map((tag, index) => (
           <Link key={tag.id} href={{ pathname: '/article', query: { tag: tag.attributes.name } }}>
-            <a>{tag.attributes.name}</a>
+            <a>
+              {tag.attributes.name}
+              {index < tags.data.length - 1 && ','}
+            </a>
           </Link>
         ))}
       </div>
