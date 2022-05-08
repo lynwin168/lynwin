@@ -59,7 +59,7 @@ const Pagination: FunctionComponent<PaginationProps> = ({ current, pageCount, ma
   return (
     <BootStrapPagination>
       <BootStrapPagination.Item
-        className={classNames(styles.pageItem, { [styles.disabled]: current === 1 })}
+        className={classNames(styles.nextButton, styles.pageItem, { [styles.disabled]: current === 1 })}
         disabled={current === 1}
         onClick={() => handleChangePage(current - 1)}
       >
@@ -67,7 +67,7 @@ const Pagination: FunctionComponent<PaginationProps> = ({ current, pageCount, ma
       </BootStrapPagination.Item>
       {paginationItem}
       <BootStrapPagination.Item
-        className={classNames(styles.pageItem, { [styles.disabled]: current === pageCount })}
+        className={classNames(styles.prevButton, styles.pageItem, { [styles.disabled]: current === pageCount })}
         disabled={current === pageCount}
         onClick={() => handleChangePage(current + 1)}
       >

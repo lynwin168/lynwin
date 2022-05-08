@@ -7,8 +7,8 @@ import { faClock } from '@fortawesome/free-solid-svg-icons'
 import dayjs from 'dayjs'
 
 import styles from './ArticleItem.module.scss'
+import CardView from '../Common/CardView'
 import { strapiMediaURL } from '@/utils/common.util'
-
 import { ArticleAttributesData } from '@/models/article.model'
 import { StrapiDataItem } from '@/models/strapi.model'
 
@@ -25,11 +25,16 @@ const ArticleItem: FunctionComponent<ArticleItemProps> = ({ article }) => {
   return (
     <Link href={`/article/${slug}`}>
       <a>
-        <div className={styles.articleItem}>
-          <div className={styles.thumbnail}>
-            <Image src={strapiMediaURL(imageUrl)} alt={alternativeText} height={imageHeight} width={imageWidth} />
-          </div>
-          <div className={styles.content}>
+        <CardView hoverable>
+          <Image
+            className={styles.thumbnail}
+            src={strapiMediaURL(imageUrl)}
+            alt={alternativeText}
+            height={imageHeight}
+            width={imageWidth}
+            unoptimized
+          />
+          <div className={styles.articleContent}>
             <h4 className={classNames(styles.title, 'mb-2')}>{title}</h4>
             <p className={styles.description}>{description}</p>
             <div className={styles.meta}>
@@ -37,7 +42,7 @@ const ArticleItem: FunctionComponent<ArticleItemProps> = ({ article }) => {
               {dayjs(publishedAt).format('DD MMM YYYY')}
             </div>
           </div>
-        </div>
+        </CardView>
       </a>
     </Link>
   )
