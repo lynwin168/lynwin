@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import { FunctionComponent } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -7,7 +6,7 @@ import HomeTrustItem from './HomeTrustItem'
 
 const HomeTrust: FunctionComponent = () => {
   return (
-    <div className={styles.trustContainer}>
+    <section className={styles.trustSection}>
       <Container>
         <Row className='gy-4'>
           <Col xl={4} md={6}>
@@ -78,7 +77,7 @@ const HomeTrust: FunctionComponent = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   )
 }
 
