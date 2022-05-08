@@ -5,6 +5,7 @@ import HomePromotion from '@/components/Home/HomePromotion'
 import HomeArticle from '@/components/Home/HomeArticle'
 import HomeGame from '@/components/Home/HomeGame'
 import HomeAboutus from '@/components/Home/HomeAboutus'
+import HomeTrust from '@/components/Home/HomeTrust'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <HomeBanner />
       <HomePromotion />
       <HomeAboutus />
+      <HomeTrust />
       <HomeGame />
       <HomeArticle />
     </>
