@@ -2,5 +2,12 @@
 
 .trustSection {
   background-color: base.$body-dark-blue-color;
-  padding: 60px;
+  padding: 40px;
+}
+
+@include base.breakpoint(max-xs) {
+  .trustSection {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
