@@ -15,14 +15,19 @@ const HomeAboutus: FunctionComponent = () => {
         <h2 className='position-relative' style={{ zIndex: 1 }}>
           ฝาก-ถอน ออโต้ โปรแรงสุดในไทย อัพเกรดใหม่ LYNWIN168 ระบบไวกว่าเดิม
         </h2>
-        <div className='mt-4 position-relative' style={{ zIndex: 1 }}>
+        <div className='mt-4 position-relative margin-xs-2' style={{ zIndex: 1 }}>
           <Image src='/images/header-logo.webp' width={304} height={50} alt='logo' />
         </div>
         <Row className={classNames('flex-xxl-row flex-column-reverse', styles.rowContent)}>
-          <Col className='mt-5 mt-xxl-0' xxl={5}>
-            <Image src='/images/home-turtle.webp' width={673} height={798} alt='turtle' />
+          <Col className='d-flex align-items-center justify-content-center mt-5 mt-xxl-0' xxl={5}>
+            <div className='d-flex d-sm-none'>
+              <Image src='/images/home-turtle.webp' width={230} height={400} alt='turtle' />
+            </div>
+            <div className='d-none d-sm-flex'>
+              <Image src='/images/home-turtle.webp' width={460} height={800} alt='turtle' />
+            </div>
           </Col>
-          <Col xxl={7}>
+          <Col className='d-flex align-items-center' xxl={7}>
             <div className={styles.welcomeTextContainer}>
               <div className={styles.welcomeLabel}>
                 <h1 className={styles.title}>ยินดีต้อนรับเข้าสู่ LYNWIN168</h1>
