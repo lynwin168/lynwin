@@ -40,6 +40,10 @@
       text-transform: uppercase;
       color: white;
       position: relative;
+
+      @include base.hover-full-state() {
+        color: base.$orange-color;
+      }
     }
   }
 
@@ -54,9 +58,11 @@
   .btnSignin {
     height: 30px;
     border-color: white;
+    color: white !important;
   }
 
   .btnSignup {
     @extend %primary-graient-color;
+    color: white !important;
   }
 }
