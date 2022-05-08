@@ -3,11 +3,15 @@ import Image from 'next/image'
 
 import styles from './Footer.module.scss'
 import { Container } from 'react-bootstrap'
+import LogoProductSlider from './LogoProductSlider'
 
 const Footer: FunctionComponent = () => {
   return (
     <footer className={styles.footerContainer}>
-      <Container className='d-flex align-items-center flex-column pt-5'>
+      <div className='pt-4'>
+        <LogoProductSlider />
+      </div>
+      <Container className='d-flex align-items-center flex-column '>
         <Image src='/images/truemoneywallet-logo.webp' alt='true money wallet' width={300} height={88} />
         <div className='d-flex justify-content-center mt-2' style={{ gap: 12 }}>
           <Image src='/images/bank_kbank.webp' alt='kbank' width={40} height={40} />

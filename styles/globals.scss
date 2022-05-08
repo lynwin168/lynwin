@@ -37,6 +37,12 @@ a {
   }
 }
 
+.footer-products-slider {
+  .slick-slide {
+    text-align: center;
+  }
+}
+
 // NOTE: remove default bootstrap focus style
 textarea:focus,
 textarea.form-control:focus,

@@ -1,15 +1,13 @@
-import { ArticleAttributesData } from '@/models/article.model'
-import { StrapiDataItem } from '@/models/strapi.model'
-import classNames from 'classnames'
-import Image from 'next/image'
-import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import { Button, Container } from 'react-bootstrap'
+import classNames from 'classnames'
+import Link from 'next/link'
 import Slider, { Settings } from 'react-slick'
-import ArticleItem from '../Article/ArticleItem'
-import CardView from '../Common/CardView'
 
 import styles from './HomeArticle.module.scss'
+import { ArticleAttributesData } from '@/models/article.model'
+import { StrapiDataItem } from '@/models/strapi.model'
+import ArticleItem from '../Article/ArticleItem'
 
 type HomeArticleProps = {
   articles: StrapiDataItem<ArticleAttributesData>[]
@@ -21,7 +19,7 @@ const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
     autoplaySpeed: 3000,
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
@@ -36,7 +34,7 @@ const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
         }
       },
       {
-        breakpoint: 960,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -55,33 +53,6 @@ const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
               <ArticleItem article={article} />
             </div>
           ))}
-          {/* <div className='d-flex justify-content-center'>
-            <ArticleItem />
-            <CardView>
-              <Image src='/images/article_01.jpg' alt='article' width={400} height={200} style={{ borderRadius: 5 }} />
-              <div className='p-4'>LUCIABET คาสิโนออนไลน์ ที่ได้ยิ่งใหญ่ในวงการพนันออนไลน์</div>
-            </CardView>
-          </div>
-          <div className='d-flex justify-content-center'>
-            <Image
-              className='rounded-5'
-              src='/images/article_01.jpg'
-              alt='article'
-              width={400}
-              height={200}
-              style={{ borderRadius: 5 }}
-            />
-          </div>
-          <div className='d-flex justify-content-center'>
-            <Image
-              className='rounded-5'
-              src='/images/article_01.jpg'
-              alt='article'
-              width={400}
-              height={200}
-              style={{ borderRadius: 5 }}
-            />
-          </div> */}
         </Slider>
         <div className='text-center'>
           <Link href='/article' passHref>
