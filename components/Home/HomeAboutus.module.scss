@@ -6,16 +6,6 @@
   background: rgb(0, 68, 147);
   background: linear-gradient(180deg, rgba(0, 68, 147, 1) 0%, rgba(25, 25, 25, 1) 100%);
   position: relative;
-}
-
-.contentContainer {
-  position: relative;
-  padding: {
-    top: 40px;
-    left: 0;
-    right: 0;
-    bottom: 120px;
-  }
 
   &::after {
     content: '';
@@ -32,10 +22,20 @@
   }
 }
 
+.contentContainer {
+  position: relative;
+  padding: {
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 120px;
+  }
+}
+
 .monkeyIcon {
   position: absolute;
   top: 0;
-  right: -193px;
+  right: 0;
 }
 
 .rowContent {

@@ -8,15 +8,15 @@ import styles from './HomeAboutus.module.scss'
 const HomeAboutus: FunctionComponent = () => {
   return (
     <section className={styles.aboutusSection}>
+      <div className={styles.monkeyIcon}>
+        <Image src='/images/home-monkey.webp' width={329} height={600} alt='monkey' unoptimized />
+      </div>
       <Container className={styles.contentContainer}>
         <h2 className='position-relative' style={{ zIndex: 1 }}>
           ฝาก-ถอน ออโต้ โปรแรงสุดในไทย อัพเกรดใหม่ LYNWIN168 ระบบไวกว่าเดิม
         </h2>
         <div className='mt-4 position-relative' style={{ zIndex: 1 }}>
           <Image src='/images/header-logo.webp' width={304} height={50} alt='logo' />
-        </div>
-        <div className={styles.monkeyIcon}>
-          <Image src='/images/home-monkey.webp' width={329} height={600} alt='monkey' unoptimized />
         </div>
         <Row className={classNames('flex-xxl-row flex-column-reverse', styles.rowContent)}>
           <Col className='mt-5 mt-xxl-0' xxl={5}>

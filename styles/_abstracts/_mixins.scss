@@ -50,3 +50,12 @@
     }
   }
 }
+
+@mixin hover-full-state {
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    @content;
+  }
+}

@@ -1,0 +1,16 @@
+@use 'styles/base';
+
+.cardView {
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
+  background-color: white;
+  color: base.$text-color;
+}
+
+.cardViewHover {
+  transition: 0.4s;
+
+  @include base.hover-full-state {
+    transform: scale(1.02);
+  }
+}

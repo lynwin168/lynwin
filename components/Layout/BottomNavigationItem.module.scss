@@ -9,7 +9,7 @@
   text-align: center;
   transition: color 0.3s ease-out 100ms;
 
-  &:hover {
+  @include base.hover-full-state {
     color: base.$orange-color;
   }
 

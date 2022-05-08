@@ -5,8 +5,15 @@ import Link from 'next/link'
 import { Button } from 'react-bootstrap'
 
 import styles from './Header.module.scss'
+import { useRouter } from 'next/router'
+import classNames from 'classnames'
 
 const Header: FunctionComponent = () => {
+  const router = useRouter()
+
+  // NOTE: ถ้าไม่ใช้หน้าแรกให้ force header เป็นสีดำ
+  const isBlackHeader = router.pathname !== '/'
+
   useEffect(() => {
     window.addEventListener('scroll', handleStickyScroll)
     return () => {
@@ -23,7 +30,7 @@ const Header: FunctionComponent = () => {
 
   return (
     <>
-      <header id='header' className={styles.header}>
+      <header id='header' className={classNames(styles.header, { [styles.black]: isBlackHeader })}>
         <Container>
           <div className='d-flex justify-content-between'>
             <Link href='/'>
@@ -43,7 +50,7 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className='d-none d-md-block'>
-                <Link href='/'>
+                <Link href='/article'>
                   <a>บทความ</a>
                 </Link>
               </li>

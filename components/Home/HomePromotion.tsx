@@ -7,11 +7,13 @@ import styles from './HomePromotion.module.scss'
 const HomePromotion: FunctionComponent = () => {
   return (
     <section id='home-promotion' className={styles.promotionSection}>
-      <Container>
-        <Row className='gy-3'>
+      <Container className='text-center'>
+        <h1 className='mb-0'>โปรโมชัน</h1>
+        <span>เดิมพันออนไลน์ ลงทุนน้อย กำไรเยอะ</span>
+        <Row className='gy-3 mt-4'>
           {new Array(9).fill(undefined).map((_, index) => {
             return (
-              <Col className='d-flex justify-content-center' xl={4} sm={6} xs={12} key={index}>
+              <Col className='d-flex justify-content-center' xl={4} xs={6} key={index}>
                 <Image
                   src={`/images/promotion_${String(index + 1).padStart(2, '0')}.webp`}
                   alt='promotion 01'

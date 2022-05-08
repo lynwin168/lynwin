@@ -1,0 +1,15 @@
+@use 'styles/base';
+
+.articleSection {
+  color: white;
+  background-color: base.$body-white-color;
+  position: relative;
+  padding-top: base.$page-top-space;
+  min-height: calc(100vh - base.$footer-height);
+}
+
+.pagination {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+}
