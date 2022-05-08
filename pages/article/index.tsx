@@ -31,6 +31,7 @@ const Article: NextPage = () => {
         }
       },
       fields: ['slug', 'title', 'description', 'publishedAt'],
+      sort: ['publishedAt:desc'],
       populate: ['image'],
       pagination: {
         page: currentPage,
