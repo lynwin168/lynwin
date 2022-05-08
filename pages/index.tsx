@@ -11,6 +11,9 @@ import HomeAboutus from '@/components/Home/HomeAboutus'
 import HomeTrust from '@/components/Home/HomeTrust'
 import { ArticleAttributesData } from '@/models/article.model'
 import { StrapiDataItem } from '@/models/strapi.model'
+import Image from 'next/image'
+
+import styles from '@/styles/Home.module.scss'
 
 const Home: NextPage = () => {
   const [articles, setArticles] = useState<StrapiDataItem<ArticleAttributesData>[]>([])
@@ -36,6 +39,9 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <a rel='noreferrer' target='_blank' href='https://line.me/R/ti/p/@341zdvtu' className={styles.lineButton}>
+        <Image src='/images/home-line.webp' width={103} height={128} alt='line button' unoptimized />
+      </a>
       <HomeBanner />
       <HomePromotion />
       <HomeAboutus />
