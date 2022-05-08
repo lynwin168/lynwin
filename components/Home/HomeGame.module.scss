@@ -1,6 +1,6 @@
 @use 'styles/base';
 
-.gameContainer {
+.gameSection {
   background: rgb(2, 16, 72);
   background: linear-gradient(0deg, rgba(2, 16, 72, 1) 0%, rgba(22, 44, 136, 1) 40%, rgba(0, 89, 179, 1) 100%);
   color: white;
@@ -24,18 +24,6 @@
   @include base.breakpoint(max-md) {
     & {
       padding: 40px 0;
-    }
-  }
-
-  .btnAllGame {
-    @extend %primary-graient-color;
-    border-radius: 20px;
-    font-size: 1.1em;
-    padding: 10px 20px;
-    z-index: 99999999;
-
-    &::before {
-      z-index: 999999;
     }
   }
 

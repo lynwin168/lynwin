@@ -3,9 +3,8 @@ import classNames from 'classnames'
 import Slider, { Settings } from 'react-slick'
 import Image from 'next/image'
 
-import Illustration from '../../public/images/Asset 4.svg'
 import styles from './HomeGame.module.scss'
-import { Button, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 const HomeGame: FunctionComponent = () => {
   const settings: Settings = {
@@ -38,7 +37,7 @@ const HomeGame: FunctionComponent = () => {
   }
 
   return (
-    <div className={classNames('text-center', styles.gameContainer)}>
+    <section className={classNames('text-center', styles.gameSection)}>
       <div className={classNames('ratio', styles.divider, styles.top)}>
         <Image src='/images/home-game-top-divider.webp' layout='fill' alt='divider' />
       </div>
@@ -66,7 +65,7 @@ const HomeGame: FunctionComponent = () => {
       <div className={classNames('ratio', styles.divider, styles.bottom)}>
         <Image src='/images/home-game-bottom-divider.webp' layout='fill' alt='divider' />
       </div>
-    </div>
+    </section>
   )
 }
 

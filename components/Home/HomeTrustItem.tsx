@@ -10,9 +10,9 @@ type HomeTrustItemProps = ImageProps & {
 
 const HomeTrustItem: FunctionComponent<HomeTrustItemProps> = ({ title, subTitle, alt, ...imageProps }) => {
   return (
-    <div className={styles.itemContainer}>
+    <div className={styles.container}>
       <Image {...imageProps} alt={alt} />
-      <div className={styles.infoContainer}>
+      <div className={styles.infoWrapper}>
         <span className={styles.title}>{title}</span>
         <span className='mt-2'>{subTitle}</span>
       </div>

@@ -7,7 +7,7 @@ import styles from './HomeAboutus.module.scss'
 
 const HomeAboutus: FunctionComponent = () => {
   return (
-    <div className={styles.aboutusBg}>
+    <section className={styles.aboutusSection}>
       <Container className={styles.contentContainer}>
         <h2 className='position-relative' style={{ zIndex: 1 }}>
           ฝาก-ถอน ออโต้ โปรแรงสุดในไทย อัพเกรดใหม่ LYNWIN168 ระบบไวกว่าเดิม
@@ -56,7 +56,7 @@ const HomeAboutus: FunctionComponent = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   )
 }
 

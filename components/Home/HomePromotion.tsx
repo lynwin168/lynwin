@@ -6,7 +6,7 @@ import styles from './HomePromotion.module.scss'
 
 const HomePromotion: FunctionComponent = () => {
   return (
-    <div id='home-promotion' className={styles.promotionContainer}>
+    <section id='home-promotion' className={styles.promotionSection}>
       <Container>
         <Row className='gy-3'>
           {new Array(9).fill(undefined).map((_, index) => {
@@ -24,7 +24,7 @@ const HomePromotion: FunctionComponent = () => {
           })}
         </Row>
       </Container>
-    </div>
+    </section>
   )
 }
 

@@ -36,7 +36,7 @@ const HomeArticle: FunctionComponent = () => {
   }
 
   return (
-    <div className={styles.articleContainer}>
+    <div className={styles.articleSection}>
       <Container>
         <h1 className='text-center text-white'>บทความ</h1>
         <Slider className='home-slick-slider article-slick-slider mt-4' {...settings}>
