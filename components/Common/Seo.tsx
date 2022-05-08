@@ -20,7 +20,7 @@ const Seo: FunctionComponent<SeoProps> = ({ title, description, keywords, shareI
       <title>{title}</title>
       <meta property='og:type' content='website' />
       <meta property='og:locale' content='th_TH' />
-      <meta property='og:site_name' content='luciabet' />
+      <meta property='og:site_name' content='lynwin168' />
       <meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
 
@@ -41,8 +41,8 @@ const Seo: FunctionComponent<SeoProps> = ({ title, description, keywords, shareI
         <>
           <meta property='og:type' content='article' />
           <meta property='og:updated_time' content={articleInfo.updatedTime} />
-          <meta property='article:publisher' content='https://luciabet.site' />
-          <meta property='article:author' content='luciabet' />
+          <meta property='article:publisher' content='https://lynwin168.com' />
+          <meta property='article:author' content='lynwin168' />
           <meta property='article:published_time' content={articleInfo.publishedTime} />
           <meta property='article:modified_time' content={articleInfo.updatedTime} />
         </>
