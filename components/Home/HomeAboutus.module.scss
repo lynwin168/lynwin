@@ -1,0 +1,274 @@
+@use 'styles/base';
+
+.aboutusBg {
+  text-align: center;
+  color: white;
+  background: rgb(0, 68, 147);
+  background: linear-gradient(180deg, rgba(0, 68, 147, 1) 0%, rgba(25, 25, 25, 1) 100%);
+  position: relative;
+}
+
+.contentContainer {
+  position: relative;
+  padding: {
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 120px;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('/images/leaf-bg.webp');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 292px;
+    opacity: 0.5;
+  }
+}
+
+.monkeyIcon {
+  position: absolute;
+  top: 0;
+  right: -193px;
+}
+
+.rowContent {
+  margin-top: 180px;
+  position: relative;
+}
+
+.welcomeTextContainer {
+  background-color: #070707;
+  padding: 100px 0 20px 0;
+  position: relative;
+  background: linear-gradient(0, rgba(0, 0, 0) 0%, rgba(0, 0, 0) 100%) padding-box,
+    linear-gradient(
+        180deg,
+        rgba(235, 244, 250, 1) 0%,
+        rgba(235, 244, 250, 1) 9%,
+        rgba(255, 255, 255, 1) 51%,
+        rgba(235, 244, 250, 1) 94%
+      )
+      border-box;
+  border: 5px solid transparent;
+  border-radius: 8px;
+  box-shadow: 8px 0 12px rgba($color: black, $alpha: 0.91);
+  font-size: 1.2em;
+  z-index: 5;
+
+  .welcomeLabel {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(48, 97, 130, 1) 0%, rgba(28, 35, 41, 1) 100%) padding-box,
+      linear-gradient(
+          180deg,
+          rgba(235, 244, 250, 1) 0%,
+          rgba(235, 244, 250, 1) 9%,
+          rgba(255, 255, 255, 1) 51%,
+          rgba(235, 244, 250, 1) 94%
+        )
+        border-box;
+    border: 5px solid transparent;
+    border-radius: 8px;
+    color: #313149;
+    color: white;
+    box-shadow: 0px 0 10px rgba(81, 203, 238, 1);
+
+    .title {
+      font-weight: bold;
+      background: linear-gradient(
+        90deg,
+        rgba(200, 214, 243, 1) 0%,
+        rgba(107, 115, 134, 1) 14%,
+        rgba(200, 214, 243, 1) 25%,
+        rgba(255, 255, 255, 1) 51%,
+        rgba(200, 214, 243, 1) 69%,
+        rgba(78, 90, 116, 1) 86%,
+        rgba(200, 214, 243, 1) 100%
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(2px 2px #333);
+      position: relative;
+      z-index: 10;
+    }
+
+    .subTitle {
+      font-size: 1.5em;
+      font-weight: bold;
+
+      & .highlight {
+        color: #00d8ff;
+      }
+    }
+  }
+
+  .firstContent {
+    padding: {
+      top: 0;
+      left: 40px;
+      right: 90px;
+      bottom: 0;
+    }
+  }
+
+  .secondContent {
+    margin-top: 20px;
+    padding: {
+      top: 0;
+      left: 355px;
+      right: 40px;
+      bottom: 0;
+    }
+  }
+
+  .kingIcon {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+  }
+
+  .penguinIcon {
+    position: absolute;
+    top: -100px;
+    right: -65px;
+  }
+
+  .goldBagIcon {
+    position: absolute;
+    bottom: -44px;
+    right: -193px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1713px) {
+  .monkeyIcon,
+  .goldBagIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 1460px) {
+  .welcomeTextContainer {
+    margin: 0 40px;
+  }
+}
+
+@include base.breakpoint(max-xxl) {
+  .secondContent {
+    margin-top: 50px !important;
+  }
+}
+
+@include base.breakpoint(max-xl) {
+  .welcomeTextContainer {
+    margin: 0 100px;
+  }
+}
+
+@include base.breakpoint(max-lg) {
+  .welcomeTextContainer {
+    margin: 0;
+  }
+
+  .kingIcon {
+    display: none;
+  }
+
+  .firstContent,
+  .secondContent {
+    padding: 0 40px !important;
+  }
+
+  .firstContent {
+    padding-right: 80px !important;
+  }
+}
+
+@media (max-width: 835px) {
+  .welcomeTextContainer {
+    margin: 0 40px;
+  }
+}
+
+@include base.breakpoint(max-md) {
+  .rowContent {
+    margin-top: 100px;
+  }
+
+  .welcomeTextContainer {
+    margin: 0;
+  }
+
+  .welcomeTextContainer {
+    margin: 0 20px;
+    box-shadow: none;
+    padding-top: 0px !important;
+
+    .welcomeLabel {
+      .title {
+        font-size: 1.4em;
+      }
+
+      .subTitle {
+        font-size: 1em;
+      }
+    }
+
+    .penguinIcon {
+      display: none !important;
+    }
+
+    .firstContent,
+    .secondContent {
+      font-size: 0.9em;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    .firstContent {
+      padding-top: 80px !important;
+    }
+
+    .secondContent {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .penguinIcon {
+    display: none !important;
+  }
+}
+
+@include base.breakpoint(max-sm) {
+  .welcomeLabel {
+    top: -10% !important;
+
+    .title {
+      font-size: 1em !important;
+    }
+
+    .subTitle {
+      font-size: 0.7em !important;
+    }
+  }
+
+  .firstContent,
+  .secondContent {
+    font-size: 0.8em !important;
+  }
+}
