@@ -1,0 +1,19 @@
+@use 'styles/base';
+
+.tagContainer {
+  display: flex;
+  font-size: 1.1em;
+
+  .tagItems {
+    display: flex;
+    gap: 5px;
+
+    a {
+      color: base.$body-dark-blue2-color;
+    }
+
+    .comma {
+      color: inherit;
+    }
+  }
+}

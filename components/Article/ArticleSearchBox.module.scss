@@ -1,0 +1,17 @@
+@use 'styles/base';
+
+.searchBox {
+  padding-right: 60px;
+}
+
+.searchButton {
+  @extend %primary-graient-color;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 55px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 0;
+}

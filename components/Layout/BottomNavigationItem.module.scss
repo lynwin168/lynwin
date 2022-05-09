@@ -1,0 +1,19 @@
+@use 'styles/base';
+
+.navigationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: white;
+  width: 80px;
+  text-align: center;
+  transition: color 0.3s ease-out 100ms;
+
+  @include base.hover-full-state {
+    color: base.$orange-color;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,13 @@
+@use 'styles/base';
+
+.articleSection {
+  background-color: base.$body-dark-blue-color;
+  padding: 40px;
+}
+
+.viewAllArticle {
+  @extend %primary-graient-color;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 20px;
+}

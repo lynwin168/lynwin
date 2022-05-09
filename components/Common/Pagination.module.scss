@@ -1,0 +1,55 @@
+@use 'styles/base';
+
+.pageItem {
+  text-align: center;
+  padding: 3px;
+
+  &.active {
+    a,
+    span {
+      @extend %primary-graient-color;
+      color: white;
+
+      @include base.hover-full-state {
+        color: base.$text-color;
+      }
+    }
+  }
+
+  & > a,
+  span {
+    width: 45px;
+    height: 45px;
+    color: base.$text-color;
+    line-height: 45px;
+    padding: 0;
+    border-radius: 50% !important;
+    border-color: base.$dark-orange-color !important;
+    background-color: rgba($color: base.$dark-orange-color, $alpha: 0.2) !important;
+    box-shadow: none;
+    outline: 0;
+
+    @include base.hover-full-state {
+      border-color: base.$dark-orange-color;
+      background-color: rgba($color: base.$dark-orange-color, $alpha: 0.2);
+      color: base.$text-color;
+    }
+  }
+
+  &.disabled {
+    cursor: no-drop !important;
+    span,
+    a {
+      background: transparent !important;
+      border: none !important;
+    }
+  }
+}
+
+.nextButton,
+.prevButton {
+  a {
+    background: transparent !important;
+    border: none !important;
+  }
+}

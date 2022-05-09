@@ -1,0 +1,10 @@
+@use 'styles/base';
+
+.footerContainer {
+  background: base.$body-black-color;
+
+  @include base.breakpoint(max-sm) {
+    padding-bottom: base.$navigation-bar-height;
+    font-size: 0.9em;
+  }
+}
