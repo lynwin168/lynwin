@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
@@ -23,28 +22,24 @@ const ArticleItem: FunctionComponent<ArticleItemProps> = ({ article }) => {
   const { url: imageUrl, height: imageHeight, width: imageWidth } = formats.small
 
   return (
-    <Link href={`/article/${slug}`}>
-      <a>
-        <CardView hoverable>
-          <Image
-            className={styles.thumbnail}
-            src={strapiMediaURL(imageUrl)}
-            alt={alternativeText}
-            height={imageHeight}
-            width={imageWidth}
-            unoptimized
-          />
-          <div className={styles.articleContent}>
-            <h4 className={classNames(styles.title, 'mb-2')}>{title}</h4>
-            <p className={styles.description}>{description}</p>
-            <div className={styles.meta}>
-              <FontAwesomeIcon icon={faClock} className={styles.icon} />
-              {dayjs(publishedAt).format('DD MMM YYYY')}
-            </div>
-          </div>
-        </CardView>
-      </a>
-    </Link>
+    <CardView hoverable>
+      <Image
+        className={styles.thumbnail}
+        src={strapiMediaURL(imageUrl)}
+        alt={alternativeText}
+        height={imageHeight}
+        width={imageWidth}
+        unoptimized
+      />
+      <div className={styles.articleContent}>
+        <h4 className={classNames(styles.title, 'mb-2')}>{title}</h4>
+        <p className={styles.description}>{description}</p>
+        <div className={styles.meta}>
+          <FontAwesomeIcon icon={faClock} className={styles.icon} />
+          {dayjs(publishedAt).format('DD MMM YYYY')}
+        </div>
+      </div>
+    </CardView>
   )
 }
 

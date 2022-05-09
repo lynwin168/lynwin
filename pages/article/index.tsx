@@ -4,12 +4,12 @@ import { useRouter } from 'next/router'
 import { Col, Container, Row } from 'react-bootstrap'
 import classNames from 'classnames'
 import qs from 'qs'
+import Link from 'next/link'
 
 import styles from '@/styles/Article.module.scss'
 import * as apiService from '@/services/api.service'
 import { ArticleAttributesData } from '@/models/article.model'
 import { StrapiDataItem } from '@/models/strapi.model'
-
 import ArticleItem from '@/components/Article/ArticleItem'
 import Pagination from '@/components/Common/Pagination'
 
@@ -69,7 +69,11 @@ const Article: NextPage = () => {
         <Row className='gy-3 gx-3'>
           {articles.map((article) => (
             <Col lg={4} md={6} sm={10} key={article.id}>
-              <ArticleItem article={article} />
+              <Link href={`/article/${article.attributes.slug}`}>
+                <a>
+                  <ArticleItem article={article} />
+                </a>
+              </Link>
             </Col>
           ))}
         </Row>

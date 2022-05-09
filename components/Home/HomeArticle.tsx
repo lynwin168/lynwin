@@ -16,7 +16,7 @@ type HomeArticleProps = {
 const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
   const settings: Settings = {
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     dots: false,
     infinite: true,
     speed: 1000,
@@ -50,7 +50,11 @@ const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
         <Slider className='home-slick-slider article-slick-slider mt-4' {...settings}>
           {articles.map((article) => (
             <div className='px-2' key={article.id}>
-              <ArticleItem article={article} />
+              <Link href={`/article/${article.attributes.slug}`}>
+                <a>
+                  <ArticleItem article={article} />
+                </a>
+              </Link>
             </div>
           ))}
         </Slider>
