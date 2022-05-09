@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['strapi.luciabet.site', 'localhost']
+    domains: ['strapi.lynwin168.com', 'localhost']
   }
 }
 
