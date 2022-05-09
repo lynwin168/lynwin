@@ -20,6 +20,7 @@ import ArticleSearchBox from '@/components/Article/ArticleSearchBox'
 import Seo, { SeoProps } from '@/components/Common/Seo'
 import ArticleTag from '@/components/Article/ArticleTag'
 import CardView from '@/components/Common/CardView'
+import Link from 'next/link'
 
 type ArticleDetailProps = {
   article: StrapiDataItem<ArticleAttributesData>
@@ -108,7 +109,11 @@ const ArticleDetail: NextPage<ArticleDetailProps> = ({ article }) => {
                       <h5 className='mb-3'>บทความที่เกี่ยวข้อง</h5>
                       <div className={styles.relatedArticleItems}>
                         {relatedArticles.data.map((article) => (
-                          <RelatedArticleItem article={article} key={article.id} />
+                          <Link href={`/article/${article.attributes.slug}`} key={article.id}>
+                            <a>
+                              <RelatedArticleItem article={article} />
+                            </a>
+                          </Link>
                         ))}
                       </div>
                     </>

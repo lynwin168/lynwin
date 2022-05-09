@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import dayjs from 'dayjs'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,27 +15,23 @@ type RelatedArticleItemProps = {
 
 const RelatedArticleItem: FunctionComponent<RelatedArticleItemProps> = ({ article }) => {
   return (
-    <Link href={`/article/${article.attributes.slug}`}>
-      <a>
-        <div className={styles.relatedArticleItem}>
-          <div className={styles.thumbnail}>
-            <Image
-              src={strapiMediaURL(article.attributes.image.data.attributes.formats.small.url)}
-              alt='blog'
-              width={500}
-              height={385}
-            />
-          </div>
-          <div className={styles.content}>
-            <h6 className={styles.title}>{article.attributes.title}</h6>
-            <span className={styles.date}>
-              <FontAwesomeIcon type='thin' icon={faClock} className='me-1' />
-              {dayjs(article.attributes.publishedAt).format('DD MMM YYYY')}
-            </span>
-          </div>
-        </div>
-      </a>
-    </Link>
+    <div className={styles.relatedArticleItem}>
+      <div className={styles.thumbnail}>
+        <Image
+          src={strapiMediaURL(article.attributes.image.data.attributes.formats.small.url)}
+          alt='blog'
+          width={500}
+          height={385}
+        />
+      </div>
+      <div className={styles.content}>
+        <h6 className={styles.title}>{article.attributes.title}</h6>
+        <span className={styles.date}>
+          <FontAwesomeIcon type='thin' icon={faClock} className='me-1' />
+          {dayjs(article.attributes.publishedAt).format('DD MMM YYYY')}
+        </span>
+      </div>
+    </div>
   )
 }
 
