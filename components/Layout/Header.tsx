@@ -58,7 +58,7 @@ const Header: FunctionComponent = () => {
                 <Button
                   target='_blank'
                   rel='noreferrer'
-                  href='https://lynwin168.servicelyn.com/signup'
+                  href='https://lynwin168.servicelyn.com'
                   variant='outline-dark'
                   className={styles.btnSignin}
                 >
@@ -69,7 +69,7 @@ const Header: FunctionComponent = () => {
                 <Button
                   target='_blank'
                   rel='noreferrer'
-                  href='https://lynwin168.servicelyn.com/'
+                  href='https://lynwin168.servicelyn.com/signup'
                   variant='outline-dark'
                   className={styles.btnSignup}
                 >

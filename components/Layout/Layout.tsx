@@ -1,16 +1,22 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, MouseEvent, useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import { Button } from 'react-bootstrap'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
+import styles from './Layout.module.scss'
 import BottomNavigationBar from './BottomNavigationBar'
 import Footer from './Footer'
 import Header from './Header'
 import Seo from '../Common/Seo'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface LayoutProps {
   children?: React.ReactNode
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
+  const [visibleContactButton, setVisibleContactButton] = useState(true)
   const router = useRouter()
   const keywords = [
     'LYN BET',
@@ -58,8 +64,21 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
     'habanero'
   ]
 
+  const handleClickHiddenContactButton = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    setVisibleContactButton(false)
+  }
+
   return (
     <>
+      {visibleContactButton && (
+        <a rel='noreferrer' target='_blank' href='https://line.me/R/ti/p/@341zdvtu' className={styles.lineButton}>
+          <Button className={styles.closeButton} onClick={handleClickHiddenContactButton}>
+            <FontAwesomeIcon icon={faCircleXmark} />
+          </Button>
+          <Image src='/images/home-line.webp' width={103} height={128} alt='line button' unoptimized />
+        </a>
+      )}
       {/* custom seo */}
       {router.pathname !== '/article/[slug]' && (
         <Seo

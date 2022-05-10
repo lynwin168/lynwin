@@ -18,7 +18,7 @@ const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
     autoplay: true,
     autoplaySpeed: 5000,
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -29,15 +29,15 @@ const HomeArticle: FunctionComponent<HomeArticleProps> = ({ articles }) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: true,
-          dots: true
+          infinite: true
         }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          infinite: true
         }
       }
     ]

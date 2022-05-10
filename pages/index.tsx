@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import qs from 'qs'
-
-import styles from '@/styles/Home.module.scss'
 
 import * as apiService from '@/services/api.service'
 import HomeBanner from '@/components/Home/HomeBanner'
@@ -38,9 +35,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <a rel='noreferrer' target='_blank' href='https://line.me/R/ti/p/@341zdvtu' className={styles.lineButton}>
-        <Image src='/images/home-line.webp' width={103} height={128} alt='line button' unoptimized />
-      </a>
       <HomeBanner />
       <HomePromotion />
       <HomeAboutus />
