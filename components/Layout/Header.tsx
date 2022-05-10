@@ -45,7 +45,7 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className='d-none d-md-block'>
-                <Link href='#home-promotion'>
+                <Link href='/#home-promotion'>
                   <a>โปรโมชัน</a>
                 </Link>
               </li>
