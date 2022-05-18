@@ -66,15 +66,11 @@ const Header: FunctionComponent = () => {
                 </Button>
               </li>
               <li>
-                <Button
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://lynwin168.servicelyn.com/signup'
-                  variant='outline-dark'
-                  className={styles.btnSignup}
-                >
-                  สมัครสมาชิก
-                </Button>
+                <Link href='/signup' passHref>
+                  <Button variant='outline-dark' className={styles.btnSignup}>
+                    สมัครสมาชิก
+                  </Button>
+                </Link>
               </li>
             </ul>
           </div>

@@ -82,8 +82,8 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
       {/* custom seo */}
       {router.pathname !== '/article/[slug]' && (
         <Seo
-          title='Lynwin168 ฝาก ถอน ไว มั่นใจ 100%'
-          description='lynwin168 ฝาก ถอน ไว มั่นใจ 100%'
+          title='Lynwin168 สล็อต PG SLOT สล็อตออนไลน์ สล็อตแตกง่าย ที่นี้'
+          description='ทางเข้าเล่นสล็อต สมัครสล็อต เกมยิงปลา เว็บสล็อตออนไลน์ ฝากถอนไม่มีขั้นต่ำ ระบบออโต้โอนไว เว็บสล็อตที่ดีที่สุด ดูแลโดยทีมงานคุณภาพได้ที่ '
           keywords={keywords.join(', ')}
         />
       )}

@@ -1,0 +1,54 @@
+@use 'styles/base';
+
+.signupSection {
+  color: white;
+  @extend %body-blue-gradient;
+  padding-top: base.$page-top-space;
+  padding-bottom: base.$page-bottom-space;
+  min-height: calc(100vh - base.$footer-height);
+
+  &::after {
+    content: '';
+    background-image: url('/images/leaf-bg.webp');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    opacity: 0.2;
+  }
+}
+
+.submitButton {
+  @extend %primary-graient-color;
+  color: white !important;
+  border: 0;
+}
+
+.signupFormCardView {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  max-width: 520px;
+  padding: 40px 30px;
+  backdrop-filter: blur(15px);
+  border-radius: 8px !important;
+  z-index: 1 !important;
+  position: relative;
+}
+
+.signin {
+  color: base.$orange-color;
+
+  @include base.hover-full-state() {
+    color: base.$orange-color;
+  }
+}
+
+@include base.breakpoint(max-lg) {
+  .signupFormCardView {
+    margin: auto !important;
+  }
+}
