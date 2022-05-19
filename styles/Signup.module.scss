@@ -22,10 +22,9 @@
   }
 }
 
-.submitButton {
-  @extend %primary-graient-color;
-  color: white !important;
-  border: 0;
+.signupContainer {
+  z-index: 2;
+  position: relative;
 }
 
 .signupFormCardView {
@@ -35,26 +34,52 @@
   padding: 40px 30px;
   backdrop-filter: blur(15px);
   border-radius: 8px !important;
-  z-index: 1 !important;
   position: relative;
+
+  .submitButton {
+    @extend %primary-graient-color;
+    color: white !important;
+    border: 0;
+  }
 }
 
-.signin {
-  color: base.$orange-color;
+.welcomeSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 
-  @include base.hover-full-state() {
+  .signin {
     color: base.$orange-color;
+
+    @include base.hover-full-state() {
+      color: base.$orange-color;
+    }
   }
 }
 
-@include base.breakpoint(max-lg) {
-  .signupFormCardView {
-    margin: auto !important;
-  }
-}
-
-.kingIcon {
+.angPao {
   position: absolute;
   top: 30px;
-  right: -120px;
+  right: -150px;
+}
+
+@media (max-width: 1320px) {
+  .angPao {
+    position: relative;
+    right: unset;
+    top: unset;
+  }
+}
+
+@include base.breakpoint(max-xl) {
+  .signupFormCardView {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .welcomeSection {
+    margin-top: 50px;
+  }
 }

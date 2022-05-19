@@ -40,7 +40,7 @@ const Signup: NextPage = () => {
       const body: SigninRequest = {
         username,
         password: raw_password,
-        return_url: 'https://luciabet.site/signin?incorrect=true'
+        return_url: 'https://lynwin168.com/signin?incorrect=true'
       }
       apiService.signin(body)
     })
@@ -175,22 +175,17 @@ const Signup: NextPage = () => {
               </Form>
             </CardView>
           </Col>
-          <Col lg={5} md={12} className='mt-5 d-flex align-items-center justify-content-center flex-column '>
-            <div className='position-relative'>
+          <Col lg={5} md={12} className={styles.welcomeSection}>
+            <div className='position-relative text-center'>
               <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
               <p className='mt-3'>
                 หากคุณมีบัญชีอยู่แล้ว ?
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://lynwin168.servicelyn.com'
-                  className={classNames(styles.signin, 'ms-2')}
-                >
-                  เข้าสู่ระบบ
-                </a>
+                <Link href='/signin'>
+                  <a className={classNames(styles.signin, 'ms-2')}>เข้าสู่ระบบ</a>
+                </Link>
               </p>
-              <div className={styles.kingIcon}>
-                <Image src='/images/Untitled-1.png' height={234} width={199} alt='king' unoptimized />
+              <div className={styles.angPao}>
+                <Image src='/images/ic-ang-pao.webp' height={234} width={199} alt='ang pao' unoptimized />
               </div>
             </div>
           </Col>

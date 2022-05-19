@@ -92,15 +92,17 @@ const Signin: NextPage = () => {
               </CardView>
             </Col>
             <Col lg={5} md={12} className={styles.welcomeSection}>
-              <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
-              <p className='mt-3'>
-                หากคุณยังไม่มีบัญชี ?
-                <Link href='/signup'>
-                  <a className={classNames(styles.signup, 'ms-2')}>สมัครสมาชิก</a>
-                </Link>
-              </p>
-              <div className={styles.penguinIcon}>
-                <Image src='/images/home-penguin.webp' width={174} height={280} alt='penguin' />
+              <div className='position-relative'>
+                <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
+                <p className='mt-3'>
+                  หากคุณยังไม่มีบัญชี ?
+                  <Link href='/signup'>
+                    <a className={classNames(styles.signup, 'ms-2')}>สมัครสมาชิก</a>
+                  </Link>
+                </p>
+                <div className={styles.penguinIcon}>
+                  <Image src='/images/home-penguin.webp' width={174} height={280} alt='penguin' />
+                </div>
               </div>
             </Col>
           </Row>

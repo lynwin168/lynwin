@@ -28,12 +28,6 @@
   z-index: 2;
 }
 
-.submitButton {
-  @extend %primary-graient-color;
-  color: white !important;
-  border: 0;
-}
-
 .signinFormCardView {
   background-color: rgba(255, 255, 255, 0.1) !important;
   color: white !important;
@@ -42,13 +36,11 @@
   backdrop-filter: blur(15px);
   border-radius: 8px !important;
   position: relative;
-}
 
-.signup {
-  color: base.$orange-color;
-
-  @include base.hover-full-state() {
-    color: base.$orange-color;
+  .submitButton {
+    @extend %primary-graient-color;
+    color: white !important;
+    border: 0;
   }
 }
 
@@ -57,21 +49,27 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+
+  .signup {
+    color: base.$orange-color;
+
+    @include base.hover-full-state() {
+      color: base.$orange-color;
+    }
+  }
 }
 
 .penguinIcon {
   position: absolute;
-  right: -8%;
-  bottom: -60px;
+  top: 50px;
+  right: -50px;
 }
 
 @media (max-width: 1320px) {
   .penguinIcon {
+    top: unset;
     position: relative;
-    right: 0;
-    bottom: 0;
-    margin-top: 10px;
+    right: unset;
   }
 }
 
