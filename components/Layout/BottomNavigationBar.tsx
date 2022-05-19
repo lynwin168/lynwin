@@ -12,9 +12,11 @@ const BottomNavigationBar: FunctionComponent = () => {
     <div
       className={classNames(styles.navigationContainer, 'd-flex align-items-center justify-content-center d-sm-none')}
     >
-      <a target='_blank' rel='noreferrer' href='https://lynwin168.servicelyn.com/'>
-        <BottomNavigationItem icon={faRightFromBracket} title='เข้าสู่ระบบ' />
-      </a>
+      <Link href='/signin'>
+        <a>
+          <BottomNavigationItem icon={faRightFromBracket} title='เข้าสู่ระบบ' />
+        </a>
+      </Link>
       <Link href='/signup'>
         <a>
           <BottomNavigationItem icon={faUserPlus} title='สมัครสมาชิก' />

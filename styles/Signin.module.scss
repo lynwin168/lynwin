@@ -1,11 +1,13 @@
 @use 'styles/base';
 
-.signupSection {
+.signinSection {
   color: white;
   @extend %body-blue-gradient;
   padding-top: base.$page-top-space;
   padding-bottom: base.$page-bottom-space;
   min-height: calc(100vh - base.$footer-height);
+  display: flex;
+  align-items: center;
 
   &::after {
     content: '';
@@ -22,24 +24,27 @@
   }
 }
 
+.signinContainer {
+  z-index: 2;
+}
+
 .submitButton {
   @extend %primary-graient-color;
   color: white !important;
   border: 0;
 }
 
-.signupFormCardView {
+.signinFormCardView {
   background-color: rgba(255, 255, 255, 0.1) !important;
   color: white !important;
-  max-width: 520px;
+  max-width: 450px;
   padding: 40px 30px;
   backdrop-filter: blur(15px);
   border-radius: 8px !important;
-  z-index: 1 !important;
   position: relative;
 }
 
-.signin {
+.signup {
   color: base.$orange-color;
 
   @include base.hover-full-state() {
@@ -47,14 +52,36 @@
   }
 }
 
-@include base.breakpoint(max-lg) {
-  .signupFormCardView {
-    margin: auto !important;
+.welcomeSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.penguinIcon {
+  position: absolute;
+  right: -8%;
+  bottom: -60px;
+}
+
+@media (max-width: 1320px) {
+  .penguinIcon {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 10px;
   }
 }
 
-.kingIcon {
-  position: absolute;
-  top: 30px;
-  right: -120px;
+@include base.breakpoint(max-xl) {
+  .signinFormCardView {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .welcomeSection {
+    margin-top: 50px;
+  }
 }

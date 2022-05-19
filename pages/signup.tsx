@@ -175,19 +175,24 @@ const Signup: NextPage = () => {
               </Form>
             </CardView>
           </Col>
-          <Col lg={5} md={12} className='mt-5 d-flex align-items-center justify-content-center flex-column'>
-            <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
-            <p className='mt-3'>
-              หากคุณมีบัญชีอยู่แล้ว ?
-              <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://lynwin168.servicelyn.com'
-                className={classNames(styles.signin, 'ms-2')}
-              >
-                เข้าสู่ระบบ
-              </a>
-            </p>
+          <Col lg={5} md={12} className='mt-5 d-flex align-items-center justify-content-center flex-column '>
+            <div className='position-relative'>
+              <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
+              <p className='mt-3'>
+                หากคุณมีบัญชีอยู่แล้ว ?
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://lynwin168.servicelyn.com'
+                  className={classNames(styles.signin, 'ms-2')}
+                >
+                  เข้าสู่ระบบ
+                </a>
+              </p>
+              <div className={styles.kingIcon}>
+                <Image src='/images/Untitled-1.png' height={234} width={199} alt='king' unoptimized />
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
