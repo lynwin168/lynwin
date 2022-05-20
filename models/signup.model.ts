@@ -11,8 +11,14 @@ export interface SignupRequest {
 
 export interface Signup {
   status: boolean
-  data: SignupData
+  data: SignupData | SignupErrorData
   message: string
+}
+
+export interface SignupErrorData {
+  key: {
+    [key: string]: string[]
+  }
 }
 
 export interface SignupData {
