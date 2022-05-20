@@ -29,7 +29,7 @@ const Signup: NextPage = () => {
     register,
     formState: { errors },
     handleSubmit
-  } = useForm<FormInputs>()
+  } = useForm<FormInputs>({ defaultValues: { auto_bonus: true } })
   const [showModal, setShowModal] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -98,7 +98,11 @@ const Signup: NextPage = () => {
                       type='password'
                       {...register('password', {
                         required: { value: true, message: 'โปรดระบุ รหัสผ่าน' },
-                        minLength: { value: 8, message: 'โปรดระบุ รหัสผ่านอย่างน้อย 8 ตัว' }
+                        minLength: { value: 8, message: 'โปรดระบุ รหัสผ่านอย่างน้อย 8 ตัว' },
+                        pattern: {
+                          value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+                          message: 'ระบุตัวเลข (0-9) และ ตัวอักษร (a-z) ห้ามมีอักขระพิเศษ'
+                        }
                       })}
                     />
                     {errors?.password && <Form.Text className='text-danger'>{errors.password.message}</Form.Text>}

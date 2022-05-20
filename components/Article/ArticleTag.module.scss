@@ -4,8 +4,13 @@
   display: flex;
   font-size: 1.1em;
 
+  .title {
+    min-width: 50px;
+  }
+
   .tagItems {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
 
     a {
