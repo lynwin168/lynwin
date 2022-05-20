@@ -52,7 +52,7 @@ const Signup: NextPage = () => {
           const body: SigninRequest = {
             username,
             password: raw_password,
-            return_url: 'https://luciabet.site/signin?incorrect=true'
+            return_url: 'https://lynwin168.com/signin?incorrect=true'
           }
           apiService.signin(body)
         } else {

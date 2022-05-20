@@ -1,12 +1,12 @@
 {
   "name": "lynwin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "homepage": "https://lynwin168.com",
+  "homepage": "https://lynwin168.com/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "production": "pm2 start ecosystem.config.js",
     "lint": "next lint"
   },
