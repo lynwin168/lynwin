@@ -60,9 +60,10 @@
 }
 
 .penguinIcon {
+  z-index: -1;
   position: absolute;
   top: 50px;
-  right: -50px;
+  right: -80px;
 }
 
 @media (max-width: 1320px) {

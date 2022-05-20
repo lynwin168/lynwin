@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from './ArticleTag.module.scss'
 import { StrapiDataItem } from '@/models/strapi.model'
 import { TagAttributesData } from '@/models/tag.model'
+import classNames from 'classnames'
 
 type ArticleTagProps = {
   tags: { data: [StrapiDataItem<TagAttributesData>] }
@@ -14,7 +15,7 @@ const ArticleTag: FunctionComponent<ArticleTagProps> = ({ tags }) => {
 
   return (
     <div className={styles.tagContainer}>
-      <div className='me-2'>Tag :</div>
+      <div className={styles.title}>Tag :</div>
       <div className={styles.tagItems}>
         {tags.data.map((tag, index) => (
           <Link key={tag.id} href={{ pathname: '/article', query: { tag: tag.attributes.name } }}>

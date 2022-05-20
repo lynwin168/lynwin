@@ -92,7 +92,7 @@ const Signin: NextPage = () => {
               </CardView>
             </Col>
             <Col lg={5} md={12} className={styles.welcomeSection}>
-              <div className='position-relative'>
+              <div className='text-center position-relative'>
                 <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
                 <p className='mt-3'>
                   หากคุณยังไม่มีบัญชี ?

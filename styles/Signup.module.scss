@@ -6,6 +6,8 @@
   padding-top: base.$page-top-space;
   padding-bottom: base.$page-bottom-space;
   min-height: calc(100vh - base.$footer-height);
+  display: flex;
+  align-items: center;
 
   &::after {
     content: '';
@@ -60,6 +62,7 @@
 }
 
 .angPao {
+  z-index: -1;
   position: absolute;
   top: 30px;
   right: -150px;
