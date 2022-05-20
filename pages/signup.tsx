@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { useRef } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import Link from 'next/link'
@@ -28,6 +29,7 @@ const Signup: NextPage = () => {
     formState: { errors },
     handleSubmit
   } = useForm<FormInputs>()
+  const refContainer = useRef<HTMLFormElement>(null)
 
   const onSubmit = (data: FormInputs) => {
     const body: SignupRequest = {
