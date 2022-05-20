@@ -1,0 +1,85 @@
+@use 'styles/base';
+
+.signinSection {
+  color: white;
+  @extend %body-blue-gradient;
+  padding-top: base.$page-top-space;
+  padding-bottom: base.$page-bottom-space;
+  min-height: calc(100vh - base.$footer-height);
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    background-image: url('/images/leaf-bg.webp');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    opacity: 0.2;
+  }
+}
+
+.signinContainer {
+  z-index: 2;
+}
+
+.signinFormCardView {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  max-width: 450px;
+  padding: 40px 30px;
+  backdrop-filter: blur(15px);
+  border-radius: 8px !important;
+  position: relative;
+
+  .submitButton {
+    @extend %primary-graient-color;
+    color: white !important;
+    border: 0;
+  }
+}
+
+.welcomeSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .signup {
+    color: base.$orange-color;
+
+    @include base.hover-full-state() {
+      color: base.$orange-color;
+    }
+  }
+}
+
+.penguinIcon {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+}
+
+@media (max-width: 1320px) {
+  .penguinIcon {
+    top: unset;
+    position: relative;
+    right: unset;
+  }
+}
+
+@include base.breakpoint(max-xl) {
+  .signinFormCardView {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .welcomeSection {
+    margin-top: 50px;
+  }
+}
