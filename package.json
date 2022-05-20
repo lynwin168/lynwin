@@ -1,8 +1,8 @@
 {
   "name": "lynwin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "homepage": "https://https://lynwin168.com/",
+  "homepage": "https://lynwin168.com/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,6 +23,7 @@
     "react": "18.1.0",
     "react-bootstrap": "^2.3.1",
     "react-dom": "18.1.0",
+    "react-hook-form": "^7.31.1",
     "react-markdown": "^8.0.3",
     "react-slick": "^0.29.0",
     "sharp": "^0.30.4",

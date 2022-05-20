@@ -4,7 +4,6 @@
   position: relative;
   --bs-aspect-ratio: calc(15 / 32 * 100%); // ratio 32:15 for banner
   max-height: 900px;
-  background: rgb(2, 16, 72);
-  background: linear-gradient(180deg, rgba(2, 16, 72, 1) 0%, rgba(22, 44, 136, 1) 40%, rgba(0, 89, 179, 1) 100%);
   padding-top: calc(base.$header-height + 30px);
+  @extend %body-blue-gradient;
 }

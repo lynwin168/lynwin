@@ -55,26 +55,18 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className='d-none d-sm-block'>
-                <Button
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://lynwin168.servicelyn.com'
-                  variant='outline-dark'
-                  className={styles.btnSignin}
-                >
-                  เข้าสู่ระบบ
-                </Button>
+                <Link href='/signin' passHref>
+                  <Button variant='outline-dark' className={styles.btnSignin}>
+                    เข้าสู่ระบบ
+                  </Button>
+                </Link>
               </li>
               <li>
-                <Button
-                  target='_blank'
-                  rel='noreferrer'
-                  href='https://lynwin168.servicelyn.com/signup'
-                  variant='outline-dark'
-                  className={styles.btnSignup}
-                >
-                  สมัครสมาชิก
-                </Button>
+                <Link href='/signup' passHref>
+                  <Button variant='outline-dark' className={styles.btnSignup}>
+                    สมัครสมาชิก
+                  </Button>
+                </Link>
               </li>
             </ul>
           </div>

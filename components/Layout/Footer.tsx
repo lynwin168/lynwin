@@ -1,9 +1,11 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import { Container } from 'react-bootstrap'
 
 import styles from './Footer.module.scss'
-import { Container } from 'react-bootstrap'
-import LogoProductSlider from './LogoProductSlider'
+
+const LogoProductSlider = dynamic(() => import('./LogoProductSlider'), { ssr: false })
 
 const Footer: FunctionComponent = () => {
   return (

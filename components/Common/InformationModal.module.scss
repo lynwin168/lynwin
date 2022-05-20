@@ -1,0 +1,25 @@
+@use 'styles/base';
+
+.customDialog {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 20px;
+  text-align: left;
+}
+
+.icon {
+  font-size: 25px;
+  margin-top: 4px;
+}
+
+.closeButton {
+  @extend %primary-graient-color;
+  margin-top: 15px;
+  padding: 5px 15px;
+  border: 0;
+}
