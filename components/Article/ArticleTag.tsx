@@ -21,7 +21,7 @@ const ArticleTag: FunctionComponent<ArticleTagProps> = ({ tags }) => {
           <Link key={tag.id} href={{ pathname: '/article', query: { tag: tag.attributes.name } }}>
             <a>
               {tag.attributes.name}
-              {index < tags.data.length - 1 && ','}
+              {index < tags.data.length - 1}
             </a>
           </Link>
         ))}

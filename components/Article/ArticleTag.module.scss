@@ -14,7 +14,12 @@
     gap: 5px;
 
     a {
-      color: base.$body-dark-blue2-color;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 3px 10px;
+      background-color: base.$tag-purple-color;
+      color: base.$body-white-color;
+      font-size: 12px;
     }
 
     .comma {

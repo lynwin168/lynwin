@@ -8,30 +8,50 @@
 }
 
 .articleDetailSectionWrapper {
-  padding: 35px;
   border-radius: 8px;
-
-  @include base.breakpoint(max-sm) {
-    padding: 20px;
-  }
 
   .detailsThumb {
     position: relative;
-    height: 412px;
+    height: 514px;
+
+    @include base.breakpoint(max-xxl) {
+      height: 442px;
+    }
+
+    @include base.breakpoint(max-xl) {
+      height: 370px;
+    }
 
     @include base.breakpoint(max-lg) {
-      height: 313px;
+      height: 418px;
+    }
+
+    @include base.breakpoint(max-md) {
+      height: 310px;
+    }
+
+    @include base.breakpoint(max-md) {
+      height: 310px;
     }
 
     @include base.breakpoint(max-xs) {
-      height: 163px;
+      height: 220px;
     }
   }
 
   .detailsContent {
+    padding: 0 35px 35px;
     margin-top: 30px;
     color: rgb(0, 0, 0, 0.76);
     line-height: 26px;
+
+    @include base.breakpoint(max-md) {
+      padding: 0 25px 25px;
+    }
+
+    @include base.breakpoint(max-sm) {
+      padding: 0 15px 15px;
+    }
 
     .title {
       font-weight: bold;
@@ -79,11 +99,7 @@
         color: base.$body-dark-blue2-color;
       }
 
-      @include base.breakpoint(max-sm) {
-        img {
-          width: 100%;
-        }
-      }
+    
     }
   }
 }
