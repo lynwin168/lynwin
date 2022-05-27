@@ -30,10 +30,6 @@
       height: 310px;
     }
 
-    @include base.breakpoint(max-md) {
-      height: 310px;
-    }
-
     @include base.breakpoint(max-xs) {
       height: 220px;
     }
@@ -99,7 +95,46 @@
         color: base.$body-dark-blue2-color;
       }
 
-    
+      img[src$="center-small"] {
+        display:block;
+        margin: 0 auto;
+        width: 150px;
+      }
+
+      img[src$="center-medium"] {
+        display:block;
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      img[src$="small"] {
+        width: 150px;
+      }
+
+      img[src$="medium"] {
+        width: 50%;
+      }
+
+      @include base.breakpoint(max-xs) {
+        img[src$="center-small"] {
+          width: 100px;
+        }
+  
+        img[src$="center-medium"] {
+          display:block;
+          margin: 0 auto;
+          width: 80%;
+        }
+  
+        img[src$="small"] {
+          width: 100px;
+        }
+  
+        img[src$="medium"] {
+          width: 80%;
+        }
+      }
+
     }
   }
 }
