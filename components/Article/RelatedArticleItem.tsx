@@ -25,7 +25,7 @@ const RelatedArticleItem: FunctionComponent<RelatedArticleItemProps> = ({ articl
         />
       </div>
       <div className={styles.content}>
-        <h6 className={styles.title}>{article.attributes.title}</h6>
+        <h2 className={styles.title}>{article.attributes.title}</h2>
         <span className={styles.date}>
           <FontAwesomeIcon type='thin' icon={faClock} className='me-1' />
           {dayjs(article.attributes.publishedAt).format('DD MMM YYYY')}

@@ -1,3 +1,4 @@
+import { KeywordAttributesData } from './keyword.model'
 import { StrapiDataItem, StrapiMediaItemData, StrapiMetaData } from './strapi.model'
 import { TagAttributesData } from './tag.model'
 
@@ -14,6 +15,7 @@ export interface ArticleAttributesData {
     data: StrapiDataItem<StrapiMediaItemData>
   }
   tags?: { data: [StrapiDataItem<TagAttributesData>] }
+  keywords?: { data: [StrapiDataItem<KeywordAttributesData>] }
   content?: string
   publishedAt: string
   createdAt: string
