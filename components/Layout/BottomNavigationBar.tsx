@@ -12,20 +12,20 @@ const BottomNavigationBar: FunctionComponent = () => {
     <div
       className={classNames(styles.navigationContainer, 'd-flex align-items-center justify-content-center d-sm-none')}
     >
-      <Link href='/signin'>
-        <a>
-          <BottomNavigationItem icon={faRightFromBracket} title='เข้าสู่ระบบ' />
-        </a>
-      </Link>
       <Link href='/signup'>
         <a>
           <BottomNavigationItem icon={faUserPlus} title='สมัครสมาชิก' />
         </a>
       </Link>
+      <Link href='/signin'>
+        <a>
+          <BottomNavigationItem icon={faRightFromBracket} title='เข้าสู่ระบบ' highlight />
+        </a>
+      </Link>
       <div className={classNames('mx-1 logo-animation ', styles.logo)}>
         <Image src='/images/linwin-logo-solo.webp' width={40} height={40} alt='logo' unoptimized />
       </div>
-      <Link href='#home-promotion'>
+      <Link href='/#home-promotion'>
         <a>
           <BottomNavigationItem icon={faGift} title='โปรโมชัน' />
         </a>
