@@ -31,8 +31,11 @@ type SocialShareType = 'twitter' | 'facebook' | 'line'
 const ArticleDetail: NextPage<ArticleDetailProps> = ({ article }) => {
   if (!article) return <div></div>
 
-  const { title, description, image, updatedAt, publishedAt, content, relatedArticles, tags } = article.attributes
+  const { title, description, image, updatedAt, publishedAt, content, relatedArticles, tags, keywords, slug } =
+    article.attributes
   const { alternativeText, url: imageURL } = image.data.attributes
+  const seoKeywords = keywords ? keywords.data.map((el) => el.attributes.name).join(', ') : ''
+  const seoTags = tags ? tags.data.map((el) => el.attributes.name).join(', ') : ''
 
   const handleClickShare = (type: SocialShareType) => {
     const url = window.location.href
@@ -52,8 +55,11 @@ const ArticleDetail: NextPage<ArticleDetailProps> = ({ article }) => {
   const seoData: SeoProps = {
     title,
     description,
+    keywords: seoKeywords,
     shareImageURL: strapiMediaURL(imageURL),
     articleInfo: {
+      slug,
+      tags: seoTags,
       publishedTime: publishedAt,
       updatedTime: updatedAt
     }
@@ -74,7 +80,7 @@ const ArticleDetail: NextPage<ArticleDetailProps> = ({ article }) => {
                     )}
                   </div>
                   <div className={styles.detailsContent}>
-                    <h3 className={styles.title}>{title}</h3>
+                    <h1 className={styles.title}>{title}</h1>
                     <div className={styles.meta}>
                       <div>
                         <FontAwesomeIcon icon={faClock} className={classNames(styles.icon, 'me-2')} />
@@ -134,7 +140,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       filters: {
         slug: context.params?.slug
       },
-      populate: ['image', 'tags', 'relatedArticles.image']
+      populate: ['image', 'tags', 'relatedArticles.image', 'keywords']
     })
     const articles = await apiService.getArticles(query)
 

@@ -32,7 +32,7 @@ const ArticleItem: FunctionComponent<ArticleItemProps> = ({ article }) => {
         unoptimized
       />
       <div className={styles.articleContent}>
-        <h4 className={classNames(styles.title, 'mb-2')}>{title}</h4>
+        <h1 className={classNames(styles.title, 'mb-2')}>{title}</h1>
         <p className={styles.description}>{description}</p>
         <div className={styles.meta}>
           <FontAwesomeIcon icon={faClock} className={styles.icon} />
