@@ -93,7 +93,11 @@
 
       a {
         cursor: pointer;
-        color: base.$body-dark-blue2-color;
+        color: base.$orange-color;
+      }
+
+      h5 {
+        text-align: center;
       }
 
       img[src$='center-small'] {
