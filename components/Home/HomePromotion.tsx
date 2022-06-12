@@ -8,7 +8,7 @@ const HomePromotion: FunctionComponent = () => {
   return (
     <section id='home-promotion' className={styles.promotionSection}>
       <Container className='text-center'>
-        <h1 className='mb-0'>โปรโมชัน</h1>
+        <h1 className='mb-0'>โปรโมชั่น</h1>
         <span>เดิมพันออนไลน์ ลงทุนน้อย กำไรเยอะ</span>
         <Row className='gy-3 mt-4'>
           {new Array(9).fill(undefined).map((_, index) => {

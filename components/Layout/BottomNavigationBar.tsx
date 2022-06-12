@@ -27,7 +27,7 @@ const BottomNavigationBar: FunctionComponent = () => {
       </div>
       <Link href='/#home-promotion'>
         <a>
-          <BottomNavigationItem icon={faGift} title='โปรโมชัน' />
+          <BottomNavigationItem icon={faGift} title='โปรโมชั่น' />
         </a>
       </Link>
       <a target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@341zdvtu'>

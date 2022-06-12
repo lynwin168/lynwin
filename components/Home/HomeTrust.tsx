@@ -65,7 +65,7 @@ const HomeTrust: FunctionComponent = () => {
               imageSize={115}
               alt='good promotion'
               title='โปรดีๆ สำหรับทุกคน'
-              subTitle='กิจกรรมและโปรโมชันหลากหลาย'
+              subTitle='กิจกรรมและโปรโมชั่นหลากหลาย'
               unoptimized
             />
           </Col>
