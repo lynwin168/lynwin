@@ -7,7 +7,7 @@ import httpClientLynwin from '@/services/httpClientLynwin'
 
 const signup = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const { phone, password, bank_transfer, bank_number, name, lastname, auto_bonus, line_account }: SignupRequest =
+    const { phone, password, bank_transfer, bank_number, name, lastname, auto_bonus, line_account, ref }: SignupRequest =
       req.body
 
     const formData = new URLSearchParams()
@@ -18,12 +18,13 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
     formData.append('name', name)
     formData.append('lastname', lastname)
     formData.append('auto_bonus', Number(auto_bonus).toString())
-    formData.append('referrer_account_id', '6')
+
+    const ref_account = ref && ref === '9' ? ref : '6'
+    formData.append('referrer_account_id', ref_account)
 
     if (line_account) {
       formData.append('line_account', line_account)
     }
-
     const response = await httpClientLynwin.post('/api/user/register', formData)
     res.json(response.data)
   } catch (err) {

@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 import classNames from 'classnames'
@@ -37,10 +38,14 @@ const Signup: NextPage = () => {
     setShowModal(false)
   }
 
+  const router = useRouter()
+  const { ref } = router.query
+
   const onSubmit = (data: FormInputs) => {
     const body: SignupRequest = {
       ...data,
-      auto_bonus: Number(data.auto_bonus)
+      auto_bonus: Number(data.auto_bonus),
+      ref: ref as string | undefined
     }
 
     apiService

@@ -7,6 +7,7 @@ export interface SignupRequest {
   password: string
   auto_bonus: number
   line_account?: string
+  ref?: string
 }
 
 export interface Signup {
