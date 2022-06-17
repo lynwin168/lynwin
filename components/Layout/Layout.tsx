@@ -19,6 +19,8 @@ interface LayoutProps {
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   const [visibleContactButton, setVisibleContactButton] = useState(true);
   const router = useRouter();
+  const { ref } = router.query
+  
   const keywords = [
     "LYN BET",
     "lynbeer",
@@ -119,10 +121,14 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
           keywords={keywords.join(", ")}
         />
       )}
-      <Header />
+      {ref !== '9' && (
+        <Header />
+      )}
       <main>{children}</main>
       <Footer />
-      <BottomNavigationBar />
+      {ref !== '9' && (
+        <BottomNavigationBar />
+      )}
     </>
   );
 };

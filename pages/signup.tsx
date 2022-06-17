@@ -74,7 +74,7 @@ const Signup: NextPage = () => {
 
   return (
     <>
-      <div className={styles.signupSection}>
+      <div className={ ref !== '9' ? styles.signupSection : styles.signupSectionOnly}>
         <Container className={styles.signupContainer}>
           <Row>
             <Col lg={7} md={12}>
@@ -208,7 +208,7 @@ const Signup: NextPage = () => {
             </Col>
             <Col lg={5} md={12} className={styles.welcomeSection}>
               <div className='position-relative text-center'>
-                <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
+                <h3 className='mb-0'>ยินดีต้อนรับสู่ LYNWIN168</h3>
                 <p className='mt-3'>
                   หากคุณมีบัญชีอยู่แล้ว ?
                   <Link href='/signin'>
