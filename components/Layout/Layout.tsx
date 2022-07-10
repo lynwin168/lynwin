@@ -65,7 +65,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
     event: MouseEvent<HTMLButtonElement>
   ) => {
     event.preventDefault();
-    setVisibleContactButton(false);
+    setVisibleContactButton(ref === '9');
   };
 
   return (
