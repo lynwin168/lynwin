@@ -62,8 +62,7 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://auto.lynwin168.com/signup?ref=6' passHref>
-                  {/* /signup */}
+                <Link href='/signup' passHref>
                   <Button variant='outline-dark' className={styles.btnSignup}>
                     สมัครสมาชิก
                   </Button>
