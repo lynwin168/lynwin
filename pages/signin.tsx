@@ -96,7 +96,8 @@ const Signin: NextPage = () => {
                 <h3 className='mb-0'>ยินดีต้อนรับสู่ Lynwin168</h3>
                 <p className='mt-3'>
                   หากคุณยังไม่มีบัญชี ?
-                  <Link href='/signup'>
+                  <Link href='https://auto.lynwin168.com/signup?ref=6'> 
+                  {/* /signup */}
                     <a className={classNames(styles.signup, 'ms-2')}>สมัครสมาชิก</a>
                   </Link>
                 </p>
