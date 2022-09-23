@@ -19,7 +19,7 @@ interface LayoutProps {
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   const [visibleContactButton, setVisibleContactButton] = useState(true);
   const router = useRouter();
-  const { ref } = router.query
+  const { reference } = router.query
   
   const keywords = [
     "LYN BET",
@@ -92,7 +92,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
       </Script>
       <noscript> <Image height={1} width={1} src={'https://www.facebook.com/tr?id=354541863450733&ev=PageView&noscript=1'} alt="facebook pixel" unoptimized/></noscript>
       {/* visibleContactButton */}
-      { ref !== '9' && ref !== '12528' && (
+      { reference !== '9' && reference !== '12528' && (
         <a
           rel="noreferrer"
           target="_blank"
@@ -122,12 +122,12 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
           keywords={keywords.join(", ")}
         />
       )}
-      {(ref !== '9' && ref !== '12528') && (
+      {(reference !== '9' && reference !== '12528') && (
         <Header />
       )}
       <main>{children}</main>
       <Footer />
-      {ref !== '9' && (
+      {reference !== '9' && (
         <BottomNavigationBar />
       )}
     </>

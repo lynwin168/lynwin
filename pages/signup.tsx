@@ -39,13 +39,13 @@ const Signup: NextPage = () => {
   }
 
   const router = useRouter()
-  const { ref } = router.query
+  const { reference } = router.query
 
   const onSubmit = (data: FormInputs) => {
     const body: SignupRequest = {
       ...data,
       auto_bonus: Number(data.auto_bonus),
-      ref: ref as string | undefined
+      ref: reference as string | undefined
     }
 
     apiService
@@ -74,7 +74,7 @@ const Signup: NextPage = () => {
 
   return (
     <>
-      <div className={ ref !== '9' && ref !== '12528' ? styles.signupSection : styles.signupSectionOnly}>
+      <div className={ reference !== '9' && reference !== '12528' ? styles.signupSection : styles.signupSectionOnly}>
         <Container className={styles.signupContainer}>
           <Row>
             <Col lg={7} md={12}>
