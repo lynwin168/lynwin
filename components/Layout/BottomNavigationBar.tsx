@@ -30,7 +30,7 @@ const BottomNavigationBar: FunctionComponent = () => {
           <BottomNavigationItem icon={faGift} title='โปรโมชั่น' />
         </a>
       </Link>
-      <a target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@335vyecg'>
+      <a target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@lynwin168'>
         <BottomNavigationItem icon={faAddressBook} title='ติดต่อ' />
       </a>
     </div>

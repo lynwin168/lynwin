@@ -96,7 +96,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
         <a
           rel="noreferrer"
           target="_blank"
-          href="https://line.me/R/ti/p/@335vyecg"
+          href="https://line.me/R/ti/p/@lynwin168"
           className={styles.lineButton}
         >
           <Button
