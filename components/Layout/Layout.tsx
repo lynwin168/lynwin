@@ -92,7 +92,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
       </Script>
       <noscript> <Image height={1} width={1} src={'https://www.facebook.com/tr?id=354541863450733&ev=PageView&noscript=1'} alt="facebook pixel" unoptimized/></noscript>
       {/* visibleContactButton */}
-      { reference !== '9' && reference !== '12528' && (
+      { (reference !== '9' && reference !== '12528' && reference !== '20513') && (
         <a
           rel="noreferrer"
           target="_blank"
@@ -122,12 +122,12 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
           keywords={keywords.join(", ")}
         />
       )}
-      {(reference !== '9' && reference !== '12528') && (
+      {(reference !== '9' && reference !== '12528' && reference !== '20513') && (
         <Header />
       )}
       <main>{children}</main>
       <Footer />
-      {reference !== '9' && (
+      {(reference !== '9'&& reference !== '12528' && reference !== '20513') && (
         <BottomNavigationBar />
       )}
     </>

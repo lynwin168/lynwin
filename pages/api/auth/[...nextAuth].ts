@@ -19,7 +19,7 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
     formData.append('lastname', lastname)
     formData.append('auto_bonus', Number(auto_bonus).toString())
 
-    const ref_account = ref && (ref === '9' || ref === '12528') ? ref : '6'
+    const ref_account = ref && (ref === '9' || ref === '12528' || ref === '20513') ? ref : '6'
     formData.append('referrer_account_id', ref_account)
 
     if (line_account) {

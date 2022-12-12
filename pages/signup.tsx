@@ -74,7 +74,7 @@ const Signup: NextPage = () => {
 
   return (
     <>
-      <div className={ reference !== '9' && reference !== '12528' ? styles.signupSection : styles.signupSectionOnly}>
+      <div className={ reference !== '9' && reference !== '12528' && reference !== '20513' ? styles.signupSection : styles.signupSectionOnly}>
         <Container className={styles.signupContainer}>
           <Row>
             <Col lg={7} md={12}>
