@@ -26,7 +26,7 @@ const Footer: FunctionComponent = () => {
           <Image src='/images/bank_tisco.webp' alt='tisco' width={40} height={40} />
           <Image src='/images/bank_baac.webp' alt='baac' width={40} height={40} />
         </div>
-        <p className='text-center text-white mt-5'>2020-2022 © Copyright LINWIN168 All rights Reserved.</p>
+        <p className='text-center text-white mt-5'>2020-2023 © Copyright LINWIN168 All rights Reserved.</p>
       </Container>
     </footer>
   )
