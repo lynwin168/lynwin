@@ -109,7 +109,7 @@ const Signin: NextPage = () => {
                   </Button>
                 </Form>
                 <p className="text-end mt-3">
-                <a className={classNames(styles.forgetPassword)} target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@lynwin168'>
+                <a className={classNames(styles.forgetPassword)} target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@lynwin168official'>
                   ลืมรหัสผ่าน ?
                 </a>
                 </p>
