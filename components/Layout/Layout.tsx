@@ -108,15 +108,9 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
       </noscript>
       {visibleNavigation && (
         <a
-<<<<<<< HEAD
           rel="noreferrer"
           target="_blank"
           href="https://line.me/R/ti/p/@jpots"
-=======
-          rel='noreferrer'
-          target='_blank'
-          href='https://line.me/R/ti/p/@lynwin168official'
->>>>>>> 88cd6929756ff0a9d3ff0e2428402eee8d8d907d
           className={styles.lineButton}
         >
           <Button className={styles.closeButton}>
