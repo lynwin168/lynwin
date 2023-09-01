@@ -110,7 +110,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
         <a
           rel="noreferrer"
           target="_blank"
-          href="https://line.me/R/ti/p/@jpots"
+          href="https://line.me/R/ti/p/@926slomw"
           className={styles.lineButton}
         >
           <Button className={styles.closeButton}>
