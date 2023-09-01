@@ -55,14 +55,14 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className='d-none d-sm-block'>
-                <Link href='/signin' passHref>
+                <Link href='https://member.jpotbet.com/'>
                   <Button variant='outline-dark' className={styles.btnSignin}>
                     เข้าสู่ระบบ
                   </Button>
                 </Link>
               </li>
               <li>
-                <Link href='/signup' passHref>
+                <Link href='https://member.jpotbet.com/register?ref=111301'>
                   <Button variant='outline-dark' className={styles.btnSignup}>
                     สมัครสมาชิก
                   </Button>

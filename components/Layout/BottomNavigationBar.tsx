@@ -12,13 +12,13 @@ const BottomNavigationBar: FunctionComponent = () => {
     <div
       className={classNames(styles.navigationContainer, 'd-flex align-items-center justify-content-center d-sm-none')}
     >
-      <Link href='/signup'>
+      <Link href='https://member.jpotbet.com/register?ref=111301'>
         <a>
           <BottomNavigationItem icon={faUserPlus} title='สมัครสมาชิก' />
         </a>
       </Link>
-      <Link href='/signin'>
-        <a>
+      <Link href='https://member.jpotbet.com/'>
+        <a >
           <BottomNavigationItem icon={faRightFromBracket} title='เข้าสู่ระบบ' highlight />
         </a>
       </Link>
@@ -30,7 +30,7 @@ const BottomNavigationBar: FunctionComponent = () => {
           <BottomNavigationItem icon={faGift} title='โปรโมชั่น' />
         </a>
       </Link>
-      <a target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@lynwin168official'>
+      <a target='_blank' rel='noreferrer' href='https://line.me/R/ti/p/@jpots'>
         <BottomNavigationItem icon={faAddressBook} title='ติดต่อ' />
       </a>
     </div>
