@@ -2,7 +2,6 @@
   "name": "lynwin",
   "version": "0.2.1",
   "private": true,
-  "homepage": "https://lynwin168.com/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,6 +22,7 @@
     "react": "18.1.0",
     "react-bootstrap": "^2.3.1",
     "react-dom": "18.1.0",
+    "react-fast-marquee": "^1.3.5",
     "react-hook-form": "^7.31.1",
     "react-markdown": "^8.0.3",
     "react-slick": "^0.29.0",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@types/acknode": "17.0.31",
+    "@types/node": "^18.15.0",
     "@types/qs": "^6.9.7",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",

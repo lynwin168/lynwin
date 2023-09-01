@@ -3,10 +3,10 @@ import { Container } from 'react-bootstrap'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from 'react-bootstrap'
+import classNames from 'classnames'
 
 import styles from './Header.module.scss'
 import { useRouter } from 'next/router'
-import classNames from 'classnames'
 
 const Header: FunctionComponent = () => {
   const router = useRouter()
@@ -29,6 +29,7 @@ const Header: FunctionComponent = () => {
   }
 
   return (
+<<<<<<< HEAD
     <>
       <header id='header' className={classNames(styles.header, { [styles.black]: isBlackHeader })}>
         <Container>
@@ -73,6 +74,50 @@ const Header: FunctionComponent = () => {
         </Container>
       </header>
     </>
+=======
+    <header id='header' className={classNames(styles.header, { [styles.black]: isBlackHeader })}>
+      <Container>
+        <div className='d-flex justify-content-between'>
+          <Link href='/'>
+            <a className='d-flex align-items-center'>
+              <Image src='/images/header-logo.webp' alt='logo' unoptimized width={152} height={25} />
+            </a>
+          </Link>
+          <ul className={styles.menu}>
+            <li className='d-none d-md-block'>
+              <Link href='/'>
+                <a>หน้าแรก</a>
+              </Link>
+            </li>
+            <li className='d-none d-md-block'>
+              <Link href='/#home-promotion'>
+                <a>โปรโมชั่น</a>
+              </Link>
+            </li>
+            <li className='d-none d-md-block'>
+              <Link href='/article'>
+                <a>บทความ</a>
+              </Link>
+            </li>
+            <li className='d-none d-sm-block'>
+              <Link href='/signin' passHref>
+                <Button variant='outline-dark' className={styles.btnSignin}>
+                  เข้าสู่ระบบ
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link href='/signup' passHref>
+                <Button variant='outline-dark' className={styles.btnSignup}>
+                  สมัครสมาชิก
+                </Button>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </Container>
+    </header>
+>>>>>>> 88cd6929756ff0a9d3ff0e2428402eee8d8d907d
   )
 }
 

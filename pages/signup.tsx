@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/router'
@@ -13,6 +13,7 @@ import CardView from '@/components/Common/CardView'
 import { SignupRequest, SignupData } from '@/models/signup.model'
 import { SigninRequest } from '@/models/signin.model'
 import InformationModal from '@/components/Common/InformationModal'
+import { AnnouncementContext } from 'contexts/AnnouncementContext'
 
 interface FormInputs {
   phone: string
@@ -33,13 +34,14 @@ const Signup: NextPage = () => {
   } = useForm<FormInputs>({ defaultValues: { auto_bonus: true } })
   const [showModal, setShowModal] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+  const router = useRouter()
+  const announcementTitle = useContext(AnnouncementContext)
+  const { reference } = router.query
+  const visibleNavigation = reference !== '9' && reference !== '12528' && reference !== '20513'
 
   const handleHideModal = () => {
     setShowModal(false)
   }
-
-  const router = useRouter()
-  const { reference } = router.query
 
   const onSubmit = (data: FormInputs) => {
     const body: SignupRequest = {
@@ -74,7 +76,13 @@ const Signup: NextPage = () => {
 
   return (
     <>
-      <div className={ reference !== '9' && reference !== '12528' && reference !== '20513' ? styles.signupSection : styles.signupSectionOnly}>
+      <div
+        className={classNames({
+          [styles.signupSection]: visibleNavigation,
+          [styles.signupSectionOnly]: !visibleNavigation,
+          [styles.signupSectionAnnouncement]: !visibleNavigation && !!announcementTitle
+        })}
+      >
         <Container className={styles.signupContainer}>
           <Row>
             <Col lg={7} md={12}>
